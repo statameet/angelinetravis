@@ -1,0 +1,9 @@
+{{#
+	@name Logo
+	@desc The logo component with a `width` attribute.
+#}}
+
+<a aria-label="Logo {{ config:app:name }}" href="{{ site:url }}" class="rounded focus:outline-none focus-visible:ring-2 ring-gold ring-offset-8 ring-offset-neutral-light dark:ring-offset-neutral-dark">
+    <img class="dark:hidden {{ class }}" src="/visuals/anne-mei-the-logo.svg" alt="{{ config:app:name }}"/>
+    <img class="hidden dark:block {{ class }}" src="/visuals/anne-mei-the-logo-dark.svg"  alt="{{ config:app:name }}"/>
+</a>

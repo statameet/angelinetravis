@@ -1,0 +1,38 @@
+{{#
+	@name Books index
+	@desc The books index template with an outer wrapper grid as defined in tailwind.config.js. It makes sure all blocks on a page get evenly spaced without having to worry about margins or paddings.
+#}}
+
+<main class="outer-grid">
+    <div class="fluid-container grid md:grid-cols-12 gap-8 md:gap-12 md:-mb-4 lg:-mb-8 xl:-mb-12">
+        <div class="md:col-span-10 md:col-start-2">
+            {{ partial:typography/h2 :content="title" }}
+        </div>
+    </div>
+
+    {{ collection:books limit="10" paginate="true" as="items" }}
+        {{ items }}
+            <article class="fluid-container grid md:grid-cols-12 gap-8 md:gap-12 md:odd:rtl">
+                <div class="md:col-span-4 md:col-start-2 flex justify-center items-center">
+                    <figure class="w-2/3 md:w-full">
+                        {{ partial:components/picture :image="cover" class="w-full h-auto shadow-2xl" cover="false" lazy="true" sizes="(min-width: 768px) 25vw, 90vw" }}
+                    </figure>
+                </div>
+
+                <div class="md:col-span-6 self-center">
+                    {{ partial:typography/h2 class="mb-4" :content="title" }}
+
+                    {{ partial:typography/paragraph :content="teaser" }}
+
+                    {{ partial:components/button label="Lees meer over dit boek" link_type="url" :entry="url" }}
+                </div>
+            </article>
+        {{ /items }}
+
+        {{ partial:components/pagination }}
+    {{ /collection:books }}
+
+    {{ page_builder scope="block" }}
+        {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+</main>

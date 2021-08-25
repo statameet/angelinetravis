@@ -1,0 +1,23 @@
+{{#
+	@name News index
+	@desc The news index template with an outer wrapper grid as defined in tailwind.config.js. It makes sure all blocks on a page get evenly spaced without having to worry about margins or paddings.
+#}}
+
+<main class="outer-grid">
+    <section class="fluid-container grid md:grid-cols-12 gap-8 md:gap-12">
+        <div class="md:col-span-10 md:col-start-2 -mb-4">
+            {{ partial:typography/h2 :content="title" }}
+        </div>
+
+        {{ collection:news limit="10" paginate="true" as="items" }}
+            {{ items }}
+                {{ partial:components/news_item class="md:col-span-5 md:even:col-start-2" }}
+            {{ /items }}
+            {{ partial:components/pagination }}
+        {{ /collection:news }}
+    </section>
+
+    {{ page_builder scope="block" }}
+        {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+</main>

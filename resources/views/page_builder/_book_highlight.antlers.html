@@ -1,0 +1,45 @@
+{{#
+	@name Book highlight
+	@desc The book highlight page builder block.
+    @set page.page_builder.book_highlight
+#}}
+
+<section class="fluid-container grid md:grid-cols-12 md:gap-x-8 lg:gap-x-16  gap-y-8 md:gap-y-12">
+    <div class="md:col-span-4 md:row-span-3 flex justify-center items-center">
+        <figure class="w-2/3 md:w-full">
+            {{ partial:components/picture :image="block:book:cover" class="w-full h-auto shadow-2xl" cover="false" lazy="true" sizes="(min-width: 768px) 25vw, 90vw" }}
+        </figure>
+    </div>
+
+    <div class="md:col-span-7 lg:col-span-6">
+        {{ partial:typography/h2 class="mb-4" :content="block:book:title" }}
+
+        {{ partial:typography/paragraph :content="block:book:teaser" }}
+    </div>
+
+    <div class="md:col-span-8 md:row-start-2 md:col-start-5 grid md:grid-cols-2 gap-x-16 gap-y-4">
+        {{ book }}
+            {{ reviews limit="2" }}
+                <div>
+                    <div class="mb-4 flex space-x-1">
+                        {{ loop times="5" }}
+                            {{ if index | add:1 <= stars }}
+                                {{ svg:star_filled class="w-4 h-4 text-gold stroke-current fill-current overflow-visible" }}
+                            {{ else }}
+                                {{ svg:star class="w-4 h-4 text-gold stroke-current overflow-visible" }}
+                            {{ /if }}
+                        {{ /loop }}
+                    </div>
+
+                    <p class="italic text-blue-dark dark:text-neutral-light">
+                        {{ review ensure_left="&quot;" ensure_right="&quot;" }}
+                    </p>
+                </div>
+            {{ /reviews }}
+        {{ /book }}
+    </div>
+
+    <div class="md:col-span-8 md:row-start-3 md:col-start-5 justify-self-end -mt-4">
+        {{ partial:components/button label="Lees meer over dit boek" link_type="entry" :entry="book" }}
+    </div>
+</section>

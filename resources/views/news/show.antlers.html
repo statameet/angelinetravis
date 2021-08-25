@@ -1,0 +1,55 @@
+{{#
+	@name News show
+	@desc The news show template with an outer wrapper grid as defined in tailwind.config.js. It makes sure all blocks on a page get evenly spaced without having to worry about margins or paddings.
+#}}
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ permalink }}"
+        },
+        "headline": "{{ title }}",
+        "image": "{{ config:app:url }}{{ image }}",
+        "datePublished": "{{ date format="Y-m-d\TH:i:s" }}",
+        "author": {
+            "@type": "Person",
+            "name": "Anne-Mei The"
+        }
+    }
+</script>
+
+<main class="outer-grid">
+    <div class="fluid-container grid grid-cols-12 gap-y-4">
+        <div class="col-span-12 md:col-span-9 md:col-start-2 md:-mb-8">
+            {{ partial:typography/h1 :content="title" }}
+
+            <date class="mb-2 font-bold text-gold italic">{{ date format_localized="%d %B %Y" }}</date>
+        </div>
+    </div>
+
+    {{ page_builder scope="block" }}
+        {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+
+    {{# The news roll content block. #}}
+    <section class="w-full py-8 md:py-12 lg:py-16 xl:py-20 bg-gold bg-opacity-10">
+        <div class="fluid-container grid md:grid-cols-12 gap-8">
+            <div class="md:col-span-12 -mb-4">
+                {{ partial:typography/h2 content="Meer nieuws" }}
+            </div>
+
+            {{ collection:news as="items" :id:isnt="id" limit="2" sort="date:asc" }}
+                {{ items }}
+                    {{ partial:components/news_item class="md:col-span-6" }}
+                {{ /items }}
+            {{ /collection:news }}
+
+            <div class="md:col-span-12 justify-self-end -mt-4">
+                {{ partial:components/button label="Al het nieuws" link_type="url" url="{mount_url from='news'}" }}
+            </div>
+        </div>
+    </section>
+</main>

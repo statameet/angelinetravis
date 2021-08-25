@@ -1,0 +1,134 @@
+title: Book
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          input_type: text
+          localizable: true
+          listable: true
+          display: Title
+          validate:
+            - required
+      -
+        import: page_builder
+  book:
+    display: Book
+    fields:
+      -
+        handle: section_book
+        field:
+          type: section
+          instructions: 'Details about this book.'
+          display: Meta
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          listabe: true
+          display: 'Release date'
+          validate:
+            - required
+      -
+        handle: teaser
+        field: common.text_plain
+        config:
+          display: Teaser
+          validate: required
+          width: 66
+          mode: default
+      -
+        handle: cover
+        field: common.image
+        config:
+          mode: grid
+          display: Cover
+          validate: required
+          width: 33
+          listable: true
+      -
+        handle: about
+        field: common.text_basic
+        config:
+          display: About
+          validate: required
+          mode: default
+      -
+        handle: reviews
+        field:
+          fields:
+            -
+              handle: stars
+              field:
+                options:
+                  1: ⭐️
+                  2: ⭐️⭐️
+                  3: ⭐️⭐️⭐️
+                  4: ⭐️⭐️⭐️⭐️
+                  5: ⭐️⭐️⭐️⭐️⭐️
+                multiple: false
+                max_items: 1
+                clearable: false
+                searchable: false
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: Stars
+                type: select
+                icon: select
+                width: 50
+                listable: hidden
+                validate:
+                  - required
+            -
+              handle: review
+              field: common.text_plain
+              config:
+                display: Review
+                validate: required
+          mode: stacked
+          reorderable: true
+          display: Reviews
+          type: grid
+          icon: grid
+          listable: false
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: meta
+        field:
+          type: section
+          instructions: 'This entry''s meta data.'
+          display: Meta
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          generate: true
+          listable: hidden
+          display: Slug
+          validate:
+            - required
+            - 'unique_entry_value:{collection},{id},{site}'
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

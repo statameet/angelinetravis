@@ -1,0 +1,11 @@
+title: Books
+template: books/show
+layout: layout
+mount: 36b30343-24a1-433e-ac10-4adb435bfa6a
+revisions: false
+route: '/{mount}/{slug}'
+date: true
+sort_dir: asc
+structure:
+  root: false
+  max_depth: 1

@@ -1,0 +1,41 @@
+{{#
+	@name Footer
+	@desc The sites footer rendered on each page.
+#}}
+
+<footer class="relative w-full pt-8 pb-24 md:pb-8 bg-neutral-dark dark:bg-black">
+    <div class="fluid-container mb-3 md:mb-0 flex flex-col space-y-3 md:space-y-0 md:flex-row md:justify-between items-baseline text-xs font-bold text-neutral-light">
+        <div>
+            © 2005 - {{ now | format:Y }} - {{ config:app:name }} | Realisatie: <a class="text-neutral-footer underline" href="https://studio1902.nl" target="_blank">studio1902.nl</a>
+
+            {{# Let's users reset their cookie consent when you use the cookie banner. #}}
+            {{ yield:reset_cookie_consent }}
+        </div>
+
+        <div class="flex space-x-2">
+            {{ if social_media:social_media }}
+                {{ social_media:social_media }}
+                    <a href="{{ prefix }}{{ url }}" rel="noopener" ria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">
+                        {{ svg :src="type" class="w-4 h-4 text-neutral-footer hover:text-neutral-light transition-colors fill-current" }}
+                    </a>
+                {{ /social_media:social_media }}
+            {{ /if }}
+        </div>
+
+        <div class="fluid-container flex flex-col space-y-3 md:space-y-0 md:flex-row md:justify-between mt-2 text-xs font-bold">
+            <ul class="flex">
+                {{ nav:footer max_depth="1" }}
+                    <li class="flex">
+                        <a class="text-neutral-footer underline" href="{{ url }}">
+                            {{ title }}
+                        </a>
+                        {{ unless last }}
+                            <span class="mx-[1ch] text-neutral-light">-</span>
+                        {{ /unless }}
+                    </li>
+                {{ /nav:footer }}
+            </ul>
+        </div>
+
+    </div>
+</footer>

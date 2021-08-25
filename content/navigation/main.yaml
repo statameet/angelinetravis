@@ -1,0 +1,7 @@
+title: Main
+collections:
+  - pages
+  - news
+  - books
+max_depth: 1
+root: true
