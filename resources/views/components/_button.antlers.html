@@ -6,19 +6,14 @@
 {{ if label }}
     <{{ as or 'a' }}
         {{ attribute }}
-        class="font-bold focus:outline-none focus-visible:ring focus-visible:ring-offset-2 {{ class }}
-            {{ if button_type == 'inline' }}
-                underline motion-safe:transition 
-                {{ inverted ? 'text-white focus-visible:ring-white' : 'text-primary focus-visible:ring-primary' }}
-            {{ else }}
-                inline-flex items-center py-3 px-4 border-2 leading-none uppercase tracking-widest text-sm no-underline select-none whitespace-nowrap motion-safe:transition
-                {{ inverted ? 'border-white text-white focus-visible:ring-white' : 'border-primary text-primary focus-visible:ring-primary' }}
-            {{ /if }}
+        class="flex pt-2 pb-1 px-1 space-x-2 font-bold text-sm uppercase tracking-widest rounded group focus:outline-none focus-visible:ring-2 ring-gold hover:underline {{ class }}
+            {{ inverted ? 'text-white' : 'text-green text-decoration-gold' }}
         "
         {{ unless faux }}
             {{ partial:snippets/button_attributes }}
         {{ /unless }}
     >
-        {{ label }}
+        <span class="h-px w-16 mt-[.5rem] bg-green transform transition-transform group-hover:scale-x-75 group-hover:bg-gold"></span>
+        <span class="">{{ label }}</span>
     </{{ as or 'a' }}>
 {{ /if }}
