@@ -8,11 +8,11 @@
         <figure class="relative w-full mb-6">
             {{ partial:components/picture :image="image" class="relative z-10 w-full h-auto " cover="false" lazy="true" sizes="(min-width: 768px) 30vw, 90vw" }}
 
-            <div class="absolute z-20 inset-0 bg-gold opacity-60 mix-blend-overlay"></div>
+            <div class="absolute z-20 inset-0 bg-primary opacity-60 mix-blend-overlay"></div>
         </figure>
     </a>
 
-    <date class="mb-2 font-bold text-gold italic">{{ date format_localized="%d %B %Y" }}</date>
+    <date class="mb-2 font-bold text-primary italic">{{ date format_localized="%d %B %Y" }}</date>
 
-    <a class="hover:underline text-decoration-gold" href="{{ url }}" title="Lees het artikel" aria-label="Lees het artikel: {{ title }}">{{ partial:typography/h3 color="text-green" :content="title" }}</a>
+    <a class="hover:underline text-decoration-primary" href="{{ url }}" title="Lees het artikel" aria-label="Lees het artikel: {{ title }}">{{ partial:typography/h3 color="text-secondary" :content="title" }}</a>
 </article>

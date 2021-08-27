@@ -10,9 +10,9 @@
             <li class="relative leading-none">
                 <a
                     class="
-                        flex items-center px-1 pt-1 rounded-sm font-bold text-sm hover:text-green focus:outline-none focus-visible:ring-2 ring-gold ring-offset-4 ring-offset-neutral-light
+                        flex items-center px-1 pt-1 rounded-sm font-bold text-sm hover:text-secondary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-4 ring-offset-neutral-light
                         {{ is_current || is_parent
-                            ? 'text-green underline underline-thickness-2 underline-offset-2'
+                            ? 'text-secondary underline underline-thickness-2 underline-offset-2'
                             : 'text-brown' }}"
                     href="{{ url }}"
                 >
@@ -32,7 +32,7 @@
     class="md:hidden"
 >
     <button
-        class="fixed z-50 w-16 h-16 flex flex-col justify-center items-center right-0 bottom-0 mb-safe mr-8 rounded bg-gold text-neutral-light text-xs text-uppercase tracking-widest font-bold transition-colors"
+        class="fixed z-50 w-16 h-16 flex flex-col justify-center items-center right-0 bottom-0 mb-safe mr-8 rounded bg-primary text-neutral-light text-xs text-uppercase tracking-widest font-bold transition-colors"
         aria-label="Toggle menu"
         @click.prevent="
             mobileNavOpen = !mobileNavOpen,
@@ -63,9 +63,9 @@
     >
         {{ nav:main max_depth="2" include_home="true" }}
             <li class="leading-none">
-                <a class="block py-2 pr-8 w-full font-bold text-lg hover:text-blue-light focus:outline-none focus-visible:ring-2 ring-gold ring-offset-4 ring-offset-neutral-dark
+                <a class="block py-2 pr-8 w-full font-bold text-lg hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-4 ring-offset-neutral-dark
                 {{ is_current || is_parent
-                    ? 'text-blue-light underline underline-thickness-2 underline-offset-2'
+                    ? 'text-primary underline underline-thickness-2 underline-offset-2'
                     : 'text-neutral-light' }}" href="{{ url }}"
                 >
                    {{ title }}

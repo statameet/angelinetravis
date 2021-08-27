@@ -30,15 +30,11 @@ module.exports = {
       primary: {
         DEFAULT: '#BBA25F',
       },
-      green: {
+      secondary: {
         DEFAULT: '#3A6F3B',
-      },
-      gold: {
-        DEFAULT: '#BBA25F',
       },
       blue: {
         DEFAULT: '#4B5061',
-        light: '#8BB4DD',
         dark: '#4B5061',
       },
       brown: {
@@ -138,8 +134,8 @@ module.exports = {
         '.mix-blend-overlay': {
           mixBlendMode: 'overlay',
         },
-        '.text-decoration-gold': {
-          textDecorationColor: theme('colors.gold.DEFAULT'),
+        '.text-decoration-primary': {
+          textDecorationColor: theme('colors.primary.DEFAULT'),
         },
         '.underline-thickness-2': {
           textDecorationThickness: '2px',

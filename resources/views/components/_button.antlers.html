@@ -6,14 +6,14 @@
 {{ if label }}
     <{{ as or 'a' }}
         {{ attribute }}
-        class="flex pt-2 pb-1 px-1 space-x-2 font-bold text-sm uppercase tracking-widest rounded group focus:outline-none focus-visible:ring-2 ring-gold hover:underline {{ class }}
-            {{ inverted ? 'text-white' : 'text-green text-decoration-gold' }}
+        class="flex pt-2 pb-1 px-1 space-x-2 font-bold text-sm uppercase tracking-widest rounded group focus:outline-none focus-visible:ring-2 ring-primary hover:underline {{ class }}
+            {{ inverted ? 'text-white' : 'text-secondary text-decoration-primary' }}
         "
         {{ unless faux }}
             {{ partial:snippets/button_attributes }}
         {{ /unless }}
     >
-        <span class="h-px w-16 mt-[.5rem] bg-green transform transition-transform group-hover:scale-x-75 group-hover:bg-gold"></span>
+        <span class="h-px w-16 mt-[.5rem] bg-secondary transform transition-transform group-hover:scale-x-75 group-hover:bg-primary"></span>
         <span class="">{{ label }}</span>
     </{{ as or 'a' }}>
 {{ /if }}

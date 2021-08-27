@@ -30,7 +30,7 @@
             {{ partial:typography/h1 :content="title" }}
 
             <div class="mb-4">
-                <span class="font-bold text-blue-dark">Gepubliceerd op: </span><date class="font-bold text-gold italic">{{ date format_localized="%d %B %Y" }}</date>
+                <span class="font-bold text-blue">Gepubliceerd op: </span><date class="font-bold text-primary italic">{{ date format_localized="%d %B %Y" }}</date>
             </div>
 
             <div class="prose max-w-none">{{ about }}</div>
@@ -44,14 +44,14 @@
                     <div class="mb-4 flex space-x-1">
                         {{ loop times="5" }}
                             {{ if index | add:1 <= stars }}
-                                {{ svg:star_filled class="w-4 h-4 text-gold stroke-current fill-current overflow-visible" }}
+                                {{ svg:star_filled class="w-4 h-4 text-primary stroke-current fill-current overflow-visible" }}
                             {{ else }}
-                                {{ svg:star class="w-4 h-4 text-gold stroke-current overflow-visible" }}
+                                {{ svg:star class="w-4 h-4 text-primary stroke-current overflow-visible" }}
                             {{ /if }}
                         {{ /loop }}
                     </div>
 
-                    <p class="italic text-blue-dark">
+                    <p class="italic text-blue">
                         {{ review ensure_left="&quot;" ensure_right="&quot;" }}
                     </p>
                 </div>

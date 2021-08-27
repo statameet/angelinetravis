@@ -29,6 +29,8 @@ data:
   use_social_image_generation: false
   sitemap_collections:
     - pages
+    - news
+    - books
   use_google_site_verification: false
   use_fathom: false
   use_cloudflare_web_analytics: false
