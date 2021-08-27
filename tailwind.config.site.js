@@ -132,46 +132,14 @@ module.exports = {
             backdropFilter: 'blur(20px) saturate(160%)',
           }
         },
-        '.bg-green-p3': {
-          backgroundColor: 'color(display-p3 0.23 0.44 0.23)',
-          backgroundColor: theme('colors.green.DEFAULT'),
-        },
-        '.bg-gold-p3': {
-          backgroundColor: 'color(display-p3 0.73 0.64 0.37)',
-          backgroundColor: theme('colors.gold.DEFAULT'),
-        },
         '.draw-stroke': {
           strokeDashoffset: '-39',
-        },
-        '.stroke-green-p3': {
-          stroke: 'color(display-p3 0.23 0.44 0.23)',
-          stroke: theme('colors.green.DEFAULT'),
-        },
-        '.text-blue-light-p3': {
-          color: 'color(display-p3 0.55 0.71 0.87)',
-          color: theme('colors.blue.light'),
-        },
-        '.bg-blue-light-p3': {
-          backgroundColor: 'color(display-p3 0.55 0.71 0.87)',
-          backgroundColor: theme('colors.blue.light'),
         },
         '.mix-blend-overlay': {
           mixBlendMode: 'overlay',
         },
-        '.stroke-blue-light-p3': {
-          stroke: 'color(display-p3 0.55 0.71 0.87)',
-          stroke: theme('colors.blue.light'),
-        },
         '.text-decoration-gold': {
           textDecorationColor: theme('colors.gold.DEFAULT'),
-        },
-        '.text-gold-p3': {
-          color: 'color(display-p3 0.73 0.64 0.37)',
-          color: theme('colors.gold.DEFAULT'),
-        },
-        '.text-green-p3': {
-          color: 'color(display-p3 0.23 0.44 0.23)',
-          color: theme('colors.green.DEFAULT'),
         },
         '.underline-thickness-2': {
           textDecorationThickness: '2px',

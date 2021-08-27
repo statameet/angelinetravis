@@ -33,7 +33,7 @@
                 <span class="font-bold text-blue-dark">Gepubliceerd op: </span><date class="font-bold text-gold italic">{{ date format_localized="%d %B %Y" }}</date>
             </div>
 
-            <div class="prose dark:prose-dark max-w-none">{{ about }}</div>
+            <div class="prose max-w-none">{{ about }}</div>
         </div>
 
         <div class="md:col-span-4 md:pt-12 flex flex-col space-y-8 md:space-y-12">
@@ -51,7 +51,7 @@
                         {{ /loop }}
                     </div>
 
-                    <p class="italic text-blue-dark dark:text-neutral-light">
+                    <p class="italic text-blue-dark">
                         {{ review ensure_left="&quot;" ensure_right="&quot;" }}
                     </p>
                 </div>

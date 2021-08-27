@@ -3,8 +3,6 @@
 	@desc The sites main navigation rendered on each page. It's 2 levels deep by default and uses AlpineJS for interactivity. There's a desktop and a mobile version.
 #}}
 
-{{ yield:dark_mode_toggle }}
-
 {{# The desktop navigation. Hidden on smaller screen. Shown from md and up. #}}
 <nav class="hidden md:block mb-3">
     <ul class="flex justify-end items-center space-x-2 lg:space-x-4 xl:space-x-6">
@@ -12,10 +10,10 @@
             <li class="relative leading-none">
                 <a
                     class="
-                        flex items-center px-1 pt-1 rounded-sm font-bold text-sm hover:text-green dark:hover:text-blue-light focus:outline-none focus-visible:ring-2 ring-gold ring-offset-4 ring-offset-neutral-light dark:ring-offset-neutral-dark
+                        flex items-center px-1 pt-1 rounded-sm font-bold text-sm hover:text-green focus:outline-none focus-visible:ring-2 ring-gold ring-offset-4 ring-offset-neutral-light
                         {{ is_current || is_parent
-                            ? 'text-green dark:text-blue-light underline underline-thickness-2 underline-offset-2'
-                            : 'text-brown dark:text-neutral-light' }}"
+                            ? 'text-green underline underline-thickness-2 underline-offset-2'
+                            : 'text-brown' }}"
                     href="{{ url }}"
                 >
                     {{ title }}
