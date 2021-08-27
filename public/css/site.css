@@ -1992,7 +1992,7 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-text-opacity: 1;
 	color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
-.text-blue-dark {
+.text-blue {
 	--tw-text-opacity: 1;
 	color: rgba(75, 80, 97, var(--tw-text-opacity));
 }
@@ -2042,10 +2042,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .text-gray-600 {
 	--tw-text-opacity: 1;
 	color: rgba(71, 85, 105, var(--tw-text-opacity));
-}
-.text-blue {
-	--tw-text-opacity: 1;
-	color: rgba(75, 80, 97, var(--tw-text-opacity));
 }
 .underline {
 	text-decoration: underline;

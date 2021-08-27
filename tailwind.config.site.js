@@ -23,7 +23,6 @@ module.exports = {
         DEFAULT: '#231F16',
         light: '#FBF9F7',
         footer: '#BCB8A8',
-        medium: '#808080',
         dark: '#231F16',
       },
       // Primary: primary brand color with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
@@ -35,7 +34,6 @@ module.exports = {
       },
       blue: {
         DEFAULT: '#4B5061',
-        dark: '#4B5061',
       },
       brown: {
         DEFAULT: '#645F4C',
