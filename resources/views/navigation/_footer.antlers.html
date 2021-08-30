@@ -1,0 +1,12 @@
+<ul class="ml-2 flex">
+    {{ nav:footer max_depth="1" }}
+        <li class="flex">
+            <a class="text-creme-light hover:text-primary underline" href="{{ url }}">
+                {{ title }}
+            </a>
+            {{ unless last }}
+                <span class="mx-[1ch] text-creme">-</span>
+            {{ /unless }}
+        </li>
+    {{ /nav:footer }}
+</ul>

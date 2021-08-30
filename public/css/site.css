@@ -1486,6 +1486,9 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .-mb-8 {
 	margin-bottom: -2rem;
 }
+.ml-2 {
+	margin-left: 0.5rem;
+}
 .block {
 	display: block;
 }
@@ -1684,6 +1687,11 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+	margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .divide-x > :not([hidden]) ~ :not([hidden]) {
 	--tw-divide-x-reverse: 0;
 	border-right-width: calc(1px * var(--tw-divide-x-reverse));
@@ -1749,7 +1757,7 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-border-opacity: 1;
 	border-color: rgba(226, 232, 240, var(--tw-border-opacity));
 }
-.bg-neutral-light {
+.bg-creme-light {
 	--tw-bg-opacity: 1;
 	background-color: rgba(251, 249, 247, var(--tw-bg-opacity));
 }
@@ -1789,9 +1797,9 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-bg-opacity: 1;
 	background-color: rgba(226, 232, 240, var(--tw-bg-opacity));
 }
-.bg-neutral-dark {
+.bg-creme {
 	--tw-bg-opacity: 1;
-	background-color: rgba(35, 31, 22, var(--tw-bg-opacity));
+	background-color: rgba(100, 95, 76, var(--tw-bg-opacity));
 }
 .bg-gray-100 {
 	--tw-bg-opacity: 1;
@@ -1976,10 +1984,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .tracking-tight {
 	letter-spacing: -0.025em;
 }
-.text-neutral-dark {
-	--tw-text-opacity: 1;
-	color: rgba(35, 31, 22, var(--tw-text-opacity));
-}
 .text-neutral {
 	--tw-text-opacity: 1;
 	color: rgba(35, 31, 22, var(--tw-text-opacity));
@@ -1992,7 +1996,7 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-text-opacity: 1;
 	color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
-.text-blue {
+.text-tertiary {
 	--tw-text-opacity: 1;
 	color: rgba(75, 80, 97, var(--tw-text-opacity));
 }
@@ -2023,17 +2027,13 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-text-opacity: 1;
 	color: rgba(30, 41, 59, var(--tw-text-opacity));
 }
-.text-neutral-light {
-	--tw-text-opacity: 1;
-	color: rgba(251, 249, 247, var(--tw-text-opacity));
-}
-.text-neutral-footer {
-	--tw-text-opacity: 1;
-	color: rgba(188, 184, 168, var(--tw-text-opacity));
-}
-.text-brown {
+.text-creme {
 	--tw-text-opacity: 1;
 	color: rgba(100, 95, 76, var(--tw-text-opacity));
+}
+.text-creme-light {
+	--tw-text-opacity: 1;
+	color: rgba(251, 249, 247, var(--tw-text-opacity));
 }
 .text-yellow-400 {
 	--tw-text-opacity: 1;
@@ -2042,6 +2042,10 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .text-gray-600 {
 	--tw-text-opacity: 1;
 	color: rgba(71, 85, 105, var(--tw-text-opacity));
+}
+.text-creme-dark {
+	--tw-text-opacity: 1;
+	color: rgba(100, 95, 76, var(--tw-text-opacity));
 }
 .underline {
 	text-decoration: underline;
@@ -2099,11 +2103,8 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .ring-offset-white {
 	--tw-ring-offset-color: #fff;
 }
-.ring-offset-neutral-light {
+.ring-offset-creme-light {
 	--tw-ring-offset-color: #FBF9F7;
-}
-.ring-offset-neutral-dark {
-	--tw-ring-offset-color: #231F16;
 }
 .transition-colors {
 	transition-property: background-color, border-color, color, fill, stroke;
@@ -2127,17 +2128,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 }
 .duration-500 {
 	transition-duration: 500ms;
-}
-.bg-neutral-dark-blur {
-	background-color: rgba(35, 31, 22, .95);
-}
-@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
-
-	.bg-neutral-dark-blur {
-		background-color: rgba(35, 31, 22, .85);
-		-webkit-backdrop-filter: blur(20px) saturate(160%);
-		        backdrop-filter: blur(20px) saturate(160%);
-	}
 }
 .draw-stroke {
 	stroke-dashoffset: -39;
@@ -2198,9 +2188,9 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-text-opacity: 1;
 	color: rgba(187, 162, 95, var(--tw-text-opacity));
 }
-.hover\:text-neutral-light:hover {
+.hover\:text-creme:hover {
 	--tw-text-opacity: 1;
-	color: rgba(251, 249, 247, var(--tw-text-opacity));
+	color: rgba(100, 95, 76, var(--tw-text-opacity));
 }
 .hover\:text-secondary:hover {
 	--tw-text-opacity: 1;

@@ -21,9 +21,6 @@ module.exports = {
       // Neutrals: neutral colors, with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
       neutral: {
         DEFAULT: '#231F16',
-        light: '#FBF9F7',
-        footer: '#BCB8A8',
-        dark: '#231F16',
       },
       // Primary: primary brand color with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
       primary: {
@@ -32,11 +29,13 @@ module.exports = {
       secondary: {
         DEFAULT: '#3A6F3B',
       },
-      blue: {
+      tertiary: {
         DEFAULT: '#4B5061',
       },
-      brown: {
+      creme: {
         DEFAULT: '#645F4C',
+        light: '#FBF9F7',
+        dark: '#645F4C',
       }
     },
     extend: {

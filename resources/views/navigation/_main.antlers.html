@@ -10,10 +10,10 @@
             <li class="relative leading-none">
                 <a
                     class="
-                        flex items-center px-1 pt-1 rounded-sm font-bold text-sm hover:text-secondary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-4 ring-offset-neutral-light
+                        flex items-center px-1 pt-1 rounded-sm font-bold text-sm hover:text-secondary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-4 ring-offset-creme-light
                         {{ is_current || is_parent
                             ? 'text-secondary underline underline-thickness-2 underline-offset-2'
-                            : 'text-brown' }}"
+                            : 'text-creme' }}"
                     href="{{ url }}"
                 >
                     {{ title }}
@@ -32,7 +32,7 @@
     class="md:hidden"
 >
     <button
-        class="fixed z-50 w-16 h-16 flex flex-col justify-center items-center right-0 bottom-0 mb-safe mr-8 rounded bg-primary text-neutral-light text-xs text-uppercase tracking-widest font-bold transition-colors"
+        class="fixed z-50 w-16 h-16 flex flex-col justify-center items-center right-0 bottom-0 mb-safe mr-8 rounded bg-primary text-creme text-xs text-uppercase tracking-widest font-bold transition-colors"
         aria-label="Toggle menu"
         @click.prevent="
             mobileNavOpen = !mobileNavOpen,
@@ -41,16 +41,16 @@
             $refs.lineBottom.classList.toggle('draw-stroke')"
     >
         <svg class="w-10 h-6 mt-2 overflow-visible transition-transform duration-500" x-ref="hamburger" viewBox="0 0 24 16">
-            <path class="bg-neutral-light stroke-current transition-all duration-500" x-ref="lineTop" stroke-linecap="round" stroke-dasharray="24 39" stroke-width="2" fill="none" d="M0 16l25.021.04s4.055.152 4.055-3.924c0-4.077-4.055-4.077-4.055-4.077L12.046 8v12"/>
-            <path class="bg-neutral-light stroke-current transition-all duration-500" stroke-width="2" stroke-linecap="round" fill="none" d="M24 8H0"/>
-            <path class="bg-neutral-light stroke-current transition-all duration-500" x-ref="lineBottom" stroke-linecap="round" stroke-dasharray="24 39" stroke-width="2" fill="none" d="M24-.067l-24.984.04S-5.04-.182-5.04 3.928-.984 8.04-.984 8.04L12.046 8 12-4"/>
+            <path class="bg-creme stroke-current transition-all duration-500" x-ref="lineTop" stroke-linecap="round" stroke-dasharray="24 39" stroke-width="2" fill="none" d="M0 16l25.021.04s4.055.152 4.055-3.924c0-4.077-4.055-4.077-4.055-4.077L12.046 8v12"/>
+            <path class="bg-creme stroke-current transition-all duration-500" stroke-width="2" stroke-linecap="round" fill="none" d="M24 8H0"/>
+            <path class="bg-creme stroke-current transition-all duration-500" x-ref="lineBottom" stroke-linecap="round" stroke-dasharray="24 39" stroke-width="2" fill="none" d="M24-.067l-24.984.04S-5.04-.182-5.04 3.928-.984 8.04-.984 8.04L12.046 8 12-4"/>
         </svg>
 
         <span class="mt-2 text-base leading-none tracking-tight">menu</span>
     </button>
 
     <ul
-        class="fixed z-40 right-[3rem] bottom-[3rem] py-6 px-8 flex flex-col rounded space-y-4 bg-neutral-dark-blur bg-opacity-95 overflow-auto origin-bottom-right"
+        class="fixed z-40 right-[3rem] bottom-[3rem] py-6 px-8 flex flex-col rounded space-y-4 bg-neutral-blur bg-opacity-95 overflow-auto origin-bottom-right"
         @click.away="mobileNavOpen = false"
         x-show="mobileNavOpen"
         x-transition:enter="motion-safe:transition-all motion-safe:duration-300"
@@ -63,10 +63,10 @@
     >
         {{ nav:main max_depth="2" include_home="true" }}
             <li class="leading-none">
-                <a class="block py-2 pr-8 w-full font-bold text-lg hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-4 ring-offset-neutral-dark
+                <a class="block py-2 pr-8 w-full font-bold text-lg hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-4 ring-offset-creme-light
                 {{ is_current || is_parent
                     ? 'text-primary underline underline-thickness-2 underline-offset-2'
-                    : 'text-neutral-light' }}" href="{{ url }}"
+                    : 'text-creme' }}" href="{{ url }}"
                 >
                    {{ title }}
                 </a>
