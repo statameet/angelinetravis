@@ -23,10 +23,14 @@ data:
       collection: books
       fallback: field
       field_handle: teaser
-  json_ld_type: none
-  person_name: Stata
+  json_ld_type: person
+  person_name: 'Daisy D. Huff'
   breadcrumbs: true
-  use_social_image_generation: false
+  use_social_image_generation: true
+  social_images_collections:
+    - pages
+    - news
+    - books
   sitemap_collections:
     - pages
     - news
