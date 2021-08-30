@@ -14,6 +14,9 @@ return [
     'form_send'                         => 'Send message',
     'form_success'                      => 'Thank you, we received your message and will contact you as soon as possible.',
 
+    // Book
+    'book_discover'                     => 'Discover this book',
+
     // Cookie banner
     'cookie_title'                      => 'Cookies 🍪',
     'cookie_functional'                 => 'Functional',
@@ -34,6 +37,9 @@ return [
     // Navigation
     'close'                             => 'Close',
     'menu'                              => 'Menu',
+
+    // News
+    'news_all'                          => 'All news',
 
     // Other
     'dark_mode_on'                      => 'Enable dark mode',
