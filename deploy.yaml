@@ -13,7 +13,7 @@ hosts:
 tasks:
   build:
     script:
-      - 'cd {{release_path}} && npm run build'
+      - 'cd {{release_path}} && npm ci && npm run production'
   deploy:
     - 'deploy:prepare'
     - 'deploy:vendors'
