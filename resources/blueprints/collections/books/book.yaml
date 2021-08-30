@@ -43,7 +43,7 @@ sections:
           width: 66
           mode: default
       -
-        handle: cover
+        handle: image
         field: common.image
         config:
           mode: grid

@@ -1,4 +1,5 @@
 title: Configuration
 data:
+  social_image: portrait-angeline-travis.jpg
   404_title: 'Page not found'
   404_text: 'The page you were looking for is not available (anymore).'

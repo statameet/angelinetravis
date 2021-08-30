@@ -67,4 +67,6 @@ page_builder:
             text: 'Iste laborum iusto pariatur exercitationem. Id delectus quo id sint illum ad. Sapiente quisquam qui eos distinctio.'
     type: article
     enabled: true
+og_image: about-og.png
+twitter_image: about-twitter.png
 ---
