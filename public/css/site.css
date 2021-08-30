@@ -2205,14 +2205,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-border-opacity: 1;
 	border-color: rgba(187, 162, 95, var(--tw-border-opacity));
 }
-.focus-visible\:border-red-600.focus-visible {
-	--tw-border-opacity: 1;
-	border-color: rgba(220, 38, 38, var(--tw-border-opacity));
-}
-.focus-visible\:border-red-600:focus-visible {
-	--tw-border-opacity: 1;
-	border-color: rgba(220, 38, 38, var(--tw-border-opacity));
-}
 .focus-visible\:border-secondary.focus-visible {
 	--tw-border-opacity: 1;
 	border-color: rgba(58, 111, 59, var(--tw-border-opacity));
@@ -2220,6 +2212,14 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .focus-visible\:border-secondary:focus-visible {
 	--tw-border-opacity: 1;
 	border-color: rgba(58, 111, 59, var(--tw-border-opacity));
+}
+.focus-visible\:border-red-600.focus-visible {
+	--tw-border-opacity: 1;
+	border-color: rgba(220, 38, 38, var(--tw-border-opacity));
+}
+.focus-visible\:border-red-600:focus-visible {
+	--tw-border-opacity: 1;
+	border-color: rgba(220, 38, 38, var(--tw-border-opacity));
 }
 .focus-visible\:ring.focus-visible {
 	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
@@ -2267,17 +2267,17 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(58, 111, 59, var(--tw-ring-opacity));
 }
-.focus-visible\:ring-opacity-40.focus-visible {
-	--tw-ring-opacity: 0.4;
-}
-.focus-visible\:ring-opacity-40:focus-visible {
-	--tw-ring-opacity: 0.4;
-}
 .focus-visible\:ring-opacity-50.focus-visible {
 	--tw-ring-opacity: 0.5;
 }
 .focus-visible\:ring-opacity-50:focus-visible {
 	--tw-ring-opacity: 0.5;
+}
+.focus-visible\:ring-opacity-40.focus-visible {
+	--tw-ring-opacity: 0.4;
+}
+.focus-visible\:ring-opacity-40:focus-visible {
+	--tw-ring-opacity: 0.4;
 }
 .focus-visible\:ring-offset-2.focus-visible {
 	--tw-ring-offset-width: 2px;

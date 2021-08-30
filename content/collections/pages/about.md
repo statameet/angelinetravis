@@ -37,7 +37,7 @@ page_builder:
         attrs:
           values:
             type: figure
-            image: portrait-daisy-d-huff.jpg
+            image: portrait-angeline-travis.jpg
             size: md
             caption: 'This is her'
       -
