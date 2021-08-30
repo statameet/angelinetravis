@@ -1,0 +1,27 @@
+import:
+    - recipe/statamic.php
+
+config:
+  application: 'statameet'
+  repository: 'git@github.com:statameet/statameet.git'
+  branch: 'deployment'
+
+hosts:
+  forge@68.183.75.15:
+    deploy_path: '~/default'
+
+tasks:
+  build:
+    script:
+      - 'cd {{release_path}} && npm run build'
+  deploy:
+    - 'deploy:prepare'
+    - 'deploy:vendors'
+    - 'artisan:storage:link'
+    - 'artisan:cache:clear'
+    - 'statamic:stache:clear'
+    - 'statamic:stache:warm'
+    - 'deploy:publish'
+
+after:
+  deploy:failed: deploy:unlock
