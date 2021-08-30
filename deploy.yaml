@@ -22,6 +22,7 @@ tasks:
     - 'artisan:storage:link'
     - 'artisan:optimize:clear'
     - 'statamic:stache:clear'
+    - 'statamic:responsive:generate'
 #    - 'statamic:stache:warm'
     - 'artisan:optimize'
     - 'deploy:publish'
