@@ -1,26 +1,159 @@
-<p align="center">
-  <img src="https://cdn.studio1902.nl/assets/statamic-peak/statamic-peak-logo.png?v=3" width="160" alt="Statamic Peak Logo" />
-</p>
-<h1 align="center">
-  Statamic Starter Kit
-</h1>
+# site.ext
 
-![Statamic 3.0+](https://img.shields.io/badge/Statamic-3.0+-FF269E?style=for-the-badge&link=https://statamic.com)
+## Installation instructions
 
-Statamic Peak is an opinionated starter kit for all your Statamic sites. It's design agnostic but comes bundled with tools like Tailwind CSS and AlpineJS and a workflow you can use to build anything you want. Peak features a page builder, a rich collection of starter templates, fieldsets, blueprints, SEO functionality, configuration and more to get you started on your clients' site straight away. Peak is easy to extend or edit to fit your clients' website needs and will drastically improve your development speed.
+1. run `composer install`
+2. run `php please make:user`
+3. run `npm i` && `npm run watch` (or `npm run dev`)
 
-The aim of Peak is to make it easy to start new projects as they often share much of the same principles. Whether you're new to Statamic or a veteran, there will be something interesting in here for you. Please participate and discuss on how to make our websites better.
+## Environment file contents
 
-Maintaining Peak demands a lot of my time and it probably saves you a lot. Your sponsoring would mean a great deal to me as it makes it much easier for me to maintain this project and keep improving it. [Sponsor me](https://github.com/sponsors/studio1902).
+### Development
 
-[Read the documentation](https://peak.studio1902.nl)
+```env
+APP_NAME=Statameet
+APP_ENV=local
+APP_KEY=base64:CbZU2FJR5sah4tWKOGfvQ70C6SQhH7ANXOcqd/0pnH0=
+APP_DEBUG=true
+APP_URL=http://statameet.test
 
-## Contributing
-<span id="contributing"></span>
+DEBUGBAR_ENABLED=true
 
-Contributions and discussions are always welcome, no matter how large or small. Treat each other with respect. Read the [Code of Conduct](https://github.com/studio1902/statamic-peak/blob/main/.github/CODE_OF_CONDUCT.md).
+LOG_CHANNEL=stack
 
-## License
-<span id="license"></span>
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+QUEUE_CONNECTION=sync
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information. Statamic itself is commercial software and has its' own license.
+REDIS_HOST=127.0.0.1
+REDIS_DATABASE=
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_MAILER=smtp
+MAIL_HOST=0.0.0.0
+MAIL_PORT=1025
+MAIL_USERNAME=testuser
+MAIL_PASSWORD=testpwd
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=info@studio1902.nl
+MAIL_FROM_NAME="${APP_NAME}"
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=mt1
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+
+MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+
+IMAGE_MANIPULATION_DRIVER=imagick
+
+STATAMIC_LICENSE_KEY=
+STATAMIC_THEME=business
+
+STATAMIC_API_ENABLED=false
+STATAMIC_REVISIONS_ENABLED=false
+
+STATAMIC_GIT_ENABLED=false
+STATAMIC_GIT_PUSH=false
+STATAMIC_GIT_DISPATCH_DELAY=5
+
+SAVE_CACHED_IMAGES=true
+STATAMIC_CACHE_TAGS_ENABLED=false
+STATAMIC_STACHE_WATCHER=true
+STATAMIC_STATIC_CACHING_STRATEGY=null
+
+#STATAMIC_CUSTOM_CMS_NAME=
+#STATAMIC_CUSTOM_LOGO_OUTSIDE_URL=
+#STATAMIC_CUSTOM_LOGO_NAV_URL=
+#STATAMIC_CUSTOM_FAVICON_URL=
+#STATAMIC_CUSTOM_CSS_URL=
+
+```
+
+### Production
+
+```env
+Dump your .env values here with sensitive data removed.
+```
+
+## NGINX config
+
+Add the following to your NGINX config __inside the server block__ enable static resource caching:
+```
+expires $expires;
+```
+
+And this __outside the server block__:
+```
+map $sent_http_content_type $expires {
+    default    off;
+    text/css    max;
+    ~image/    max;
+    application/javascript    max;
+    application/octet-stream    max;
+}
+```
+
+## Deploy script Ploi
+
+```bash
+if [[ {COMMIT_MESSAGE} =~ "[BOT]" ]]; then
+    echo "Automatically committed on production. Nothing to deploy."
+    exit 0
+fi
+
+cd {SITE_DIRECTORY}
+git pull origin main
+composer install --no-interaction --prefer-dist --optimize-autoloader
+
+npm i
+npm run production
+php{SITE_PHP_VERSION} artisan cache:clear
+php{SITE_PHP_VERSION} artisan config:cache
+php{SITE_PHP_VERSION} artisan route:cache
+php{SITE_PHP_VERSION} artisan statamic:stache:warm
+php{SITE_PHP_VERSION} artisan statamic:search:update --all
+php{SITE_PHP_VERSION} artisan statamic:static:clear
+php{SITE_PHP_VERSION} artisan statamic:static:warm
+php{SITE_PHP_VERSION} artisan statamic:assets:generate-presets
+
+{RELOAD_PHP_FPM}
+
+echo "🚀 Application deployed!"
+```
+
+## Deploy script Forge
+
+```bash
+if [[ $FORGE_DEPLOY_MESSAGE =~ "[BOT]" ]]; then
+    echo "Automatically committed on production. Nothing to deploy."
+    exit 0
+fi
+
+cd $FORGE_SITE_PATH
+git pull origin main
+$FORGE_COMPOSER install --no-interaction --prefer-dist --optimize-autoloader
+
+npm i
+npm run production
+$FORGE_PHP artisan cache:clear
+$FORGE_PHP artisan config:cache
+$FORGE_PHP artisan route:cache
+$FORGE_PHP artisan statamic:stache:warm
+$FORGE_PHP artisan statamic:search:update --all
+$FORGE_PHP artisan statamic:static:clear
+$FORGE_PHP artisan statamic:static:warm
+$FORGE_PHP artisan statamic:assets:generate-presets --queue
+
+( flock -w 10 9 || exit 1
+    echo 'Restarting FPM...'; sudo -S service $FORGE_PHP_FPM reload ) 9>/tmp/fpmlock
+```
