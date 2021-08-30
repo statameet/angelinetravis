@@ -6,8 +6,9 @@ require 'recipe/statamic.php';
 // Config
 
 set('application', 'Statamic Deployment');
-set('deploy_path', '~/{{application}}');
+set('deploy_path', '~/deployment');
 set('repository', 'git@github.com:statameet/statameet.git');
+set('branch', 'deployment');
 
 add('shared_files', []);
 add('shared_dirs', []);
@@ -15,7 +16,7 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('forge@68.183.75.15');
+host('68.183.75.15')->setRemoteUser('forge');
 
 // Tasks
 
