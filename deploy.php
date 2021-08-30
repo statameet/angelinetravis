@@ -6,7 +6,7 @@ require 'recipe/statamic.php';
 // Config
 
 set('application', 'Statamic Deployment');
-set('deploy_path', '~/deployment');
+set('deploy_path', '~/default');
 set('repository', 'git@github.com:statameet/statameet.git');
 set('branch', 'deployment');
 
