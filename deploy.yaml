@@ -18,7 +18,7 @@ tasks:
     - 'deploy:prepare'
     - 'deploy:vendors'
     - 'artisan:storage:link'
-    - 'artisan:cache:clear'
+    - 'artisan:optimize:clear'
     - 'deploy:assets'
     - 'statamic:stache:clear'
     - 'statamic:stache:warm'
