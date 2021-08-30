@@ -17,11 +17,12 @@ tasks:
   deploy:
     - 'deploy:prepare'
     - 'deploy:vendors'
+    - 'deploy:assets'
     - 'artisan:storage:link'
     - 'artisan:optimize:clear'
-    - 'deploy:assets'
     - 'statamic:stache:clear'
     - 'statamic:stache:warm'
+    - 'artisan:optimize'
     - 'deploy:publish'
 
 after:
