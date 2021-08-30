@@ -11,6 +11,7 @@ fields:
     handle: image
     field: common.image
     config:
+      mode: grid
       width: 33
       validate:
         - required

@@ -118,13 +118,6 @@ module.exports = {
     // Custom utilities for this particular site.
     plugin(function({ addUtilities, theme, variants }) {
       const newUtilities = {
-        '.bg-neutral-dark-blur': {
-          backgroundColor: 'rgba(35, 31, 22, .95)',
-          '@supports (backdrop-filter: blur(20px))': {
-            backgroundColor: 'rgba(35, 31, 22, .85)',
-            backdropFilter: 'blur(20px) saturate(160%)',
-          }
-        },
         '.draw-stroke': {
           strokeDashoffset: '-39',
         },

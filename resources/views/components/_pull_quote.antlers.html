@@ -4,8 +4,8 @@
     @set page.article.pull_quote
 #}}
 
-<div class="size-{{ size }} my-4">   
-    <div class="p-0 m-0 text-primary italic text-3xl leading-snug">
+<div class="size-{{ size }} my-4">
+    <div class="p-0 m-0 text-primary font-bold italic text-3xl leading-snug">
         {{ quote | nl2br }}
     </div>
     {{ if author }}
@@ -13,4 +13,4 @@
             {{ author }}
         </span>
     {{ /if }}
-</div> 
+</div>

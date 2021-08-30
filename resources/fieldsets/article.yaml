@@ -14,7 +14,6 @@ fields:
         - quote
         - removeformat
         - anchor
-        - image
       save_html: false
       toolbar_mode: fixed
       link_noopener: false
@@ -42,6 +41,11 @@ fields:
           fields:
             -
               import: buttons
+        lead:
+          display: Lead
+          fields:
+            -
+              import: lead
         pull_quote:
           display: 'Pull quote'
           fields:

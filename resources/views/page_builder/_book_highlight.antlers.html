@@ -23,7 +23,7 @@
                 <div>
                     <div class="mb-4 flex space-x-1">
                         {{ loop times="5" }}
-                            {{ if index | add:1 <= stars }}
+                            {{ if count <= stars }}
                                 {{ svg:star_filled class="w-4 h-4 text-primary stroke-current fill-current overflow-visible" }}
                             {{ else }}
                                 {{ svg:star class="w-4 h-4 text-primary stroke-current overflow-visible" }}
@@ -40,6 +40,6 @@
     </div>
 
     <div class="md:col-span-8 md:row-start-3 md:col-start-5 justify-self-end -mt-4">
-        {{ partial:components/button label="Lees meer over dit boek" link_type="entry" :entry="book" }}
+        {{ partial:components/button label="Discover this book" link_type="entry" :entry="book" }}
     </div>
 </section>

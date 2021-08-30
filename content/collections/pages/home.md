@@ -1,7 +1,9 @@
 ---
+id: home
+blueprint: page
 title: Home
-updated_by: d6b18b1b-85a6-40b5-bfd1-88bfd1102ae3
-updated_at: 1616686191
+updated_by: 2d840f14-f430-469b-91bb-2ae10e38f1e2
+updated_at: 1630324744
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -10,17 +12,17 @@ sitemap_priority: 0.5
 page_builder:
   -
     text: |-
-      Anne-Mei
-      The
-    image: anne-mei-the.jpg
+      Daisy D
+      Huff
+    image: portrait-daisy-d-huff.jpg
     type: introduction
     enabled: true
   -
-    title: 'Wie is Anne-Mei The?'
-    text: 'Anne-Mei The is cultureel antropoloog en bijzonder hoogleraar Langdurige Zorg en Sociale Benadering Dementie aan de Vrije Universiteit Amsterdam. Ze heeft naam gemaakt als onderzoekster en schrijfster van spraakmakende boeken, zoals haar laatste boek ''Dagelijks leven met dementie - een blik achter de voordeur'' en het opnieuw actuele ''Verlossers naast God''.'
+    title: 'Who is Daisy D. Huff?'
+    text: 'Reprehenderit omnis ipsa culpa quod minima. Cumque odit voluptatem sit aut voluptatem temporibus possimus. Quasi id ea velit quaerat doloribus. Qui sit beatae ducimus laborum sequi id aut. Possimus ut eum alias vel. Voluptas neque quo non eaque doloremque possimus praesentium. Iste explicabo sit dolores sunt impedit tempore recusandae quos.'
     buttons:
       -
-        label: 'Lees meer over Anne-Mei'
+        label: 'Read up on Daisy'
         target_blank: false
         link_type: entry
         entry: 180a5209-a2da-43d9-8354-6ef5aec85900
@@ -38,8 +40,7 @@ page_builder:
     enabled: true
     book: 63d9511c-a01b-4ba0-8bee-d83d6eaac58c
   -
-    title: Nieuws
+    title: News
     type: news_roll
     enabled: true
-id: home
 ---
