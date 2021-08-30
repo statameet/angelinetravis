@@ -1,4 +1,4 @@
-# site.ext
+# statameet.test
 
 ## Installation instructions
 
