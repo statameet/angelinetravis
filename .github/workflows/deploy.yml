@@ -2,9 +2,6 @@ name: Deploy
 
 on:
   push:
-    branches: [ zero-downtime ]
-  pull_request:
-    branches: [ zero-downtime ]
 
 jobs:
   deploy:
