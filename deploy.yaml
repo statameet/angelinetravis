@@ -5,6 +5,7 @@ config:
   application: 'statameet'
   repository: 'git@github.com:statameet/statameet.git'
   branch: 'deployment'
+  keep_releases: 3
 
 hosts:
   forge@68.183.75.15:
@@ -21,7 +22,7 @@ tasks:
     - 'artisan:storage:link'
     - 'artisan:optimize:clear'
     - 'statamic:stache:clear'
-    - 'statamic:stache:warm'
+#    - 'statamic:stache:warm'
     - 'artisan:optimize'
     - 'deploy:publish'
 
