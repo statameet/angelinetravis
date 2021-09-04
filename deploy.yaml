@@ -21,7 +21,7 @@ hosts:
 tasks:
   git:update:
     script:
-      - 'git pull'
+      - 'cd {{release_path}} && git pull'
   deploy:assets:
     script:
       - 'cd {{release_path}} && npm ci && npm run production'
