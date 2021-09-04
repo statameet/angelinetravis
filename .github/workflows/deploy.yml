@@ -20,11 +20,11 @@ jobs:
             php artisan down
             composer install --no-interaction --prefer-dist --optimize-autoloader
             php artisan optimize:clear
-            php artisan up
             npm ci
             npm run production
             php artisan optimize:clear
             php please stache:warm
+            php artisan up
 
   deploy_live:
     runs-on: ubuntu-latest
