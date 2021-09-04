@@ -13,7 +13,7 @@ hosts:
   production:
     hostname: 'forge@159.69.125.76'
     deploy_path: '~/live.statameet.com'
- staging:
+  staging:
     hostname: 'forge@159.69.125.76'
     deploy_path: '~/staging.statameet.com'
 
