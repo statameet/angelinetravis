@@ -21,7 +21,8 @@ hosts:
 tasks:
   git:update:
     script:
-      - 'cd {{release_path}} && git fetch --all'
+      - 'cd {{previous_release}} && php statamic git:commit'
+      - 'cd {{release_path}} && git fetch origin deployment'
   deploy:assets:
     script:
       - 'cd {{release_path}} && npm ci && npm run production'
