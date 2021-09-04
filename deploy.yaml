@@ -8,6 +8,7 @@ config:
   keep_releases: 3
   shared_dirs:
     - public/img
+    - .git
 
 hosts:
   live:
