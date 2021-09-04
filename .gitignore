@@ -10,6 +10,7 @@
 /storage/*.key
 /storage/antlers-language-server
 /vendor
+CHANGELOG.md
 .env
 .env.backup
 .phpunit.result.cache
