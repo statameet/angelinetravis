@@ -22,7 +22,7 @@ tasks:
   git:update:
     script:
       - 'cd {{previous_release}} && php please git:commit'
-      - 'cd {{release_path}} && git fetch origin/deployment && git reset origin/deployment'
+      - 'cd {{release_path}} && git fetch origin deployment && git reset origin deployment'
   deploy:assets:
     script:
       - 'cd {{release_path}} && npm ci && npm run production'
