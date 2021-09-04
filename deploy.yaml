@@ -8,8 +8,8 @@ config:
   keep_releases: 3
 
 hosts:
-  forge@68.183.75.15:
-    deploy_path: '~/default'
+  forge@159.69.125.76:
+    deploy_path: '~/live.statameet.com'
 
 tasks:
   deploy:assets:
@@ -22,7 +22,7 @@ tasks:
     - 'artisan:storage:link'
     - 'artisan:optimize:clear'
     - 'statamic:stache:clear'
-    - 'statamic:responsive:generate'
+#    - 'statamic:responsive:generate'
 #    - 'statamic:stache:warm'
     - 'artisan:optimize'
     - 'deploy:publish'
