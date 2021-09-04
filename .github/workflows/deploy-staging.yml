@@ -15,7 +15,7 @@ jobs:
         with:
           host: 159.69.125.76
           username: forge
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.PRIVATE_KEY }}
           script: |
             cd /home/forge/staging.statameet.com
             git pull origin main
