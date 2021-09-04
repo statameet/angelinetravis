@@ -1,6 +1,8 @@
 name: Deploy in Production
 
-on: workflow_dispatch
+on:
+  push:
+    branches: [ deployment ]
 
 jobs:
   deploy_staging:
