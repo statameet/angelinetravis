@@ -10,8 +10,12 @@ config:
     - public/img
 
 hosts:
-  forge@159.69.125.76:
+  production:
+    hostname: 'forge@159.69.125.76'
     deploy_path: '~/live.statameet.com'
+ staging:
+    hostname: 'forge@159.69.125.76'
+    deploy_path: '~/staging.statameet.com'
 
 tasks:
   deploy:assets:
