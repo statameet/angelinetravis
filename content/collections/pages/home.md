@@ -19,7 +19,7 @@ page_builder:
     enabled: true
   -
     title: 'Update via the git integration.'
-    text: 'More change 2. Reprehenderit omnis ipsa culpa quod minima. Cumque odit voluptatem sit aut voluptatem temporibus possimus. Quasi id ea velit quaerat doloribus. Qui sit beatae ducimus laborum sequi id aut. Possimus ut eum alias vel. Voluptas neque quo non eaque doloremque possimus praesentium. Iste explicabo sit dolores sunt impedit tempore recusandae quos.'
+    text: 'Reprehenderit omnis ipsa culpa quod minima. Cumque odit voluptatem sit aut voluptatem temporibus possimus. Quasi id ea velit quaerat doloribus. Qui sit beatae ducimus laborum sequi id aut. Possimus ut eum alias vel. Voluptas neque quo non eaque doloremque possimus praesentium. Iste explicabo sit dolores sunt impedit tempore recusandae quos.'
     buttons:
       -
         label: 'Read up on Angeline 2'
