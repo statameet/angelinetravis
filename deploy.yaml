@@ -26,8 +26,8 @@ tasks:
     script:
       - 'cd {{release_path}} && npm ci && npm run production'
   deploy:
-    - 'git:update'
     - 'deploy:prepare'
+    - 'git:update'
     - 'deploy:vendors'
     - 'deploy:assets'
     - 'artisan:storage:link'
