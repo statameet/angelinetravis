@@ -11,11 +11,11 @@
 ### Development
 
 ```env
-APP_NAME=Statameet
+APP_NAME=Angeline Travis
 APP_ENV=local
 APP_KEY=base64:CbZU2FJR5sah4tWKOGfvQ70C6SQhH7ANXOcqd/0pnH0=
 APP_DEBUG=true
-APP_URL=http://statameet.test
+APP_URL=http://angelinetravis.test
 
 DEBUGBAR_ENABLED=true
 
@@ -76,7 +76,6 @@ STATAMIC_STATIC_CACHING_STRATEGY=null
 #STATAMIC_CUSTOM_LOGO_NAV_URL=
 #STATAMIC_CUSTOM_FAVICON_URL=
 #STATAMIC_CUSTOM_CSS_URL=
-
 ```
 
 ### Production

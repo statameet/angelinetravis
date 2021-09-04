@@ -11,6 +11,7 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "statamic/cms": "3.2.*",
+        "spatie/browsershot": "^3.50",
         "deployer/deployer": "dev-master"
     },
     "require-dev": {

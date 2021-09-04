@@ -1,9 +1,12 @@
 /node_modules
+/public/css/
 /public/hot
-/public/storage
-/public/vendor/statamic
 /public/img/
+/public/js/
+/public/mix-manifest.json
 /public/static/
+/public/storage
+/public/vendor/
 /storage/*.key
 /storage/antlers-language-server
 /vendor
@@ -15,7 +18,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
- /public/js/
- /public/css/
- /public/mix-manifest.json
 .idea

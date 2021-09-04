@@ -1,4 +1,5 @@
-title: Page
+title: Default
+order: 1
 sections:
   main:
     display: Main

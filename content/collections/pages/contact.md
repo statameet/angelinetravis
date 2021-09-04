@@ -16,4 +16,6 @@ page_builder:
     type: form
     enabled: true
     text: 'Ut neque ab velit. Facilis quo dolorem ipsum. Amet praesentium nisi sint ad fugit inventore. Nobis eos dolore illo cumque maxime.'
+og_image: contact-og.png
+twitter_image: contact-twitter.png
 ---
