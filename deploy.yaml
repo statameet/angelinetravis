@@ -19,10 +19,14 @@ hosts:
     deploy_path: '~/staging.statameet.com'
 
 tasks:
+  git:update:
+    script:
+      - 'git pull'
   deploy:assets:
     script:
       - 'cd {{release_path}} && npm ci && npm run production'
   deploy:
+    - 'git:update'
     - 'deploy:prepare'
     - 'deploy:vendors'
     - 'deploy:assets'
