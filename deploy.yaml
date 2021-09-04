@@ -6,6 +6,8 @@ config:
   repository: 'git@github.com:statameet/statameet.git'
   branch: 'deployment'
   keep_releases: 3
+  shared_dirs:
+    - public/img
 
 hosts:
   forge@159.69.125.76:
