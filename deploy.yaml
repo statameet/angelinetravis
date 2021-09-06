@@ -4,7 +4,7 @@ import:
 config:
   application: 'statameet'
   repository: 'git@github.com:statameet/statameet.git'
-  branch: 'deployment'
+  branch: 'optimization'
   keep_releases: 3
   shared_dirs:
     - public/img
@@ -13,10 +13,7 @@ config:
 hosts:
   live:
     hostname: 'forge@159.69.125.76'
-    deploy_path: '~/live.statameet.com'
-  staging:
-    hostname: 'forge@159.69.125.76'
-    deploy_path: '~/staging.statameet.com'
+    deploy_path: '~/caching-and-optimization.statameet.com'
 
 tasks:
   git:commit:
@@ -28,7 +25,7 @@ tasks:
   deploy:
     - 'deploy:prepare'
     - 'git:commit'
-    - 'git:update'
+#    - 'git:update'
     - 'deploy:vendors'
     - 'deploy:assets'
     - 'artisan:storage:link'

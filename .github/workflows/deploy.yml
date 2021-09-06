@@ -2,31 +2,9 @@ name: Deploy in Production
 
 on:
   push:
-    branches: [ deployment ]
+    branches: [ optimization ]
 
 jobs:
-  deploy_staging:
-    if: "!contains(github.event.head_commit.message, '[BOT]')"
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy staging
-        uses: appleboy/ssh-action@master
-        with:
-          host: 159.69.125.76
-          username: forge
-          key: ${{ secrets.PRIVATE_KEY }}
-          script: |
-            cd /home/forge/staging.statameet.com
-            git pull origin main
-            php artisan down
-            composer install --no-interaction --prefer-dist --optimize-autoloader
-            php artisan optimize:clear
-            npm ci
-            npm run production
-            php artisan optimize:clear
-            php please stache:warm
-            php artisan up
-
   deploy_live:
     runs-on: ubuntu-latest
     steps:
