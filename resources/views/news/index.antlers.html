@@ -13,7 +13,9 @@
             {{ items }}
                 {{ partial:components/news_item class="md:col-span-5 md:even:col-start-2" }}
             {{ /items }}
-            {{ partial:components/pagination }}
+            <div class="md:col-span-10 md:col-start-2">
+                {{ partial:components/pagination }}
+            </div>
         {{ /collection:news }}
     </section>
 
