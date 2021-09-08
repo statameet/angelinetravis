@@ -13,7 +13,7 @@ config:
 hosts:
   live:
     hostname: 'forge@159.69.125.76'
-    deploy_path: '~/caching-and-optimization.statameet.com'
+    deploy_path: '~/optimization.statameet.com'
 
 tasks:
   git:commit:
