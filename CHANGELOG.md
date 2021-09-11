@@ -1,5 +1,60 @@
 # Release Notes
 
+## 3.4 (2021-09-09)
+
+### What's new
+- Add `x-trap` to trap focus in `resources/views/navigation/_main.antlers.html`. Also changed: `resources/site.js` and `package.json`.
+
+### What's improved
+- Update dependencies.
+
+### What's removed
+- Remove unreliable backdrop blur variant in `tailwind.config.peak.js`.
+
+## 3.3 (2021-09-04)
+
+### What's new
+- Ok that previous version simply wasn’t finished. The last resort wouldn’t even dive into OG tags. Can you imagine? Now it does. But all in the collection grid. You might have to copy and paste stuff one or two times, but the wild fallback cascade became kind of a last resort on itself anyway. This is cleaner. Thanks again Mountain Watcher David. Updated files: `resources/views/snippets/_seo.antlers.html`, `resources/views/snippets/_fallback_description.antlers.html` and `resources/blueprints/globals/seo.yaml`.
+
+## 3.2 (2021-09-03)
+
+### What's new
+- Add a last resort meta description field in `resources/views/snippets/_seo.antlers.html` and `resources/blueprints/globals/seo.yaml`. Thanks David!
+
+## 3.1.2 (2021-08-27)
+
+### What's new
+- Render form field instructions when they are being used in `resources/views/snippets/_form_fields.antlers.html`.
+
+### What's improved
+- Clean up `resources/views/components/_notification.antlers.html` by using Antlers conditional variable fallbacks.
+
+## 3.1.1 (2021-08-26)
+
+### What's improved
+- Grant editors the ability to rename and move assets in `resources/users/roles.yaml` since 3.2 automagically updates all asset references. Lovely!
+
+## 3.1 (2021-08-25)
+
+### What's new
+- Add SEO global option to add content to the page title on a per collection basis in: `resources/views/snippets/_seo.antlers.html`, and `resources/blueprints/globals/seo.yaml`.
+
+### What's improved
+- Add `strip_tags` modifier in `resources/views/snippets/_fallback_description.antlers.html` when fallback is set to `field`.
+
+## 3.0 (2021-08-24)
+
+### What's new
+- Installing Peak now uses the new Starter Kit functionality in Peak. [Check the docs](https://peak.studio1902.nl/getting-started/installation.html).
+- Add the new Peak branding to the default templates, pages and e-mails.
+- Add some starter content to explain what Peak can do.
+
+### What's improved
+- Use the Glide tag in `resources/views/snippets/_background_image.antlers.html` so you can use either an asset or a hard coded image. E.g: `{{ partial:snippets/background_image image="visuals/some-image.jpg" selector="footer" }}`.
+- Set widths to fields in the redirect grid in `resources/blueprints/globals/redirects.yaml`.
+- Update `README.example.md` with zero downtime deployment `{CLEAR_NEW_RELEASE}` command.
+- Change `font-black` to `font-bold` in `resources/views/typography/_h2.antlers.html` and `resources/views/typography/_h3.antlers.html`.
+
 ## 2.2 (2021-08-03)
 
 ### What's improved

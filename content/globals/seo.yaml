@@ -1,40 +1,10 @@
 title: SEO
 data:
-  title_separator: '~'
-  change_page_title:
-    -
-      collection: books
-      fallback: collection_title
-      custom_text: Boeken
-    -
-      collection: news
-      fallback: collection_title
-      custom_text: null
-  collection_defaults:
-    -
-      collection: pages
-      fallback: page_builder
-      field_handle: null
-    -
-      collection: news
-      fallback: page_builder
-      field_handle: null
-    -
-      collection: books
-      fallback: field
-      field_handle: teaser
-  json_ld_type: person
-  person_name: 'Daisy D. Huff'
-  breadcrumbs: true
-  use_social_image_generation: true
-  social_images_collections:
-    - pages
-    - news
-    - books
+  json_ld_type: none
+  breadcrumbs: false
+  use_social_image_generation: false
   sitemap_collections:
     - pages
-    - news
-    - books
   use_google_site_verification: false
   use_fathom: false
   use_cloudflare_web_analytics: false

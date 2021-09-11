@@ -41,11 +41,6 @@ fields:
           fields:
             -
               import: buttons
-        lead:
-          display: Lead
-          fields:
-            -
-              import: lead
         pull_quote:
           display: 'Pull quote'
           fields:

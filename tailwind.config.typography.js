@@ -17,8 +17,7 @@ module.exports = {
           css: {
             color: theme('colors.neutral.DEFAULT'),
             '[class~="lead"]': {
-              color: theme('colors.tertiary.DEFAULT'),
-              fontWeight: theme('fontWeight.bold'),
+              color: theme('colors.neutral.DEFAULT'),
             },
             a: {
               color: theme('colors.primary.DEFAULT'),
@@ -30,7 +29,7 @@ module.exports = {
               textDecoration: 'none',
             },
             'h1, h2, h3, h4': {
-              color: theme('colors.tertiary.DEFAULT'),
+              color: theme('colors.primary.DEFAULT'),
             },
             blockquote: {
               borderColor: theme('colors.primary.DEFAULT'),

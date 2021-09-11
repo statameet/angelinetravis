@@ -3,6 +3,10 @@
 	@desc The logo component with a `width` attribute.
 #}}
 
-<a aria-label="Logo {{ config:app:name }}" href="{{ site:url }}" class="rounded focus:outline-none focus-visible:ring-2 ring-primary ring-offset-8 ring-offset-creme-light">
-    <img class="{{ class }}" src="/visuals/angeline-travis-logo.svg" alt="{{ config:app:name }}"/>
+<a
+	class="hover:scale-125 hover:rotate-2 transition-transform"
+	aria-label="Logo {{ config:app:name }}"
+	href="{{ site:url }}"
+>
+    <img src="/visuals/statamic-peak-logo.svg" width="{{ width }}" alt="{{ config:app:name }}"/>
 </a>

@@ -15,8 +15,7 @@
 
 {{# The actual toggle yielded in the `resources/views/navigation/_main.antlers.html`. #}}
 {{ section:dark_mode_toggle }}
-    <div
-        class="fixed z-20 top-0 right-0 md:top-[.5rem] md:right-[.5rem]"
+    <li
         x-data="{ darkMode: $persist(false) }"
         x-effect="
             darkMode
@@ -41,5 +40,5 @@
         >
             {{ svg:sun class="w-5 h-5 text-neutral hover:text-primary stroke-current transition-colors overflow-visible" alt="" aria-hidden="true" }}
         </button>
-    </div>
+    </li>
 {{ /section:dark_mode_toggle }}

@@ -4,17 +4,12 @@
     @set page.page_builder.call_to_action
 #}}
 
-<section class="w-full py-8 md:py-12 lg:py-16 xl:py-20 bg-primary bg-opacity-10">
-    <div class="fluid-container grid md:grid-cols-12 md:gap-x-8 lg:gap-x-16 gap-y-8 md:gap-y-12">
-        <div class="md:col-span-4 md:text-right md:justify-self-end">
-            {{ partial:typography/h2 class="mb-4 md:max-w-[15ch]" :content="block:title" }}
-        </div>
-
-        <div class="md:col-span-7 lg:col-span-6">
-            {{ partial:typography/paragraph class="mb-4" :content="block:text" }}
-            {{ if block:buttons }}
-                {{ partial:components/buttons }}
-            {{ /if }}
-        </div>
+<section class="fluid-container grid md:grid-cols-12 gap-y-8 md:gap-8">
+    <div class="md:col-start-3 md:col-span-8">
+        {{ partial:typography/h2 class="mb-4" :content="block:title" }}
+        {{ partial:typography/paragraph class="mb-4" :content="block:text" }}
+        {{ if block:buttons }}
+            {{ partial:components/buttons }}
+        {{ /if }}
     </div>
 </section>

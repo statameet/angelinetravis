@@ -16,33 +16,27 @@ fields:
           fields:
             -
               import: article
-        book_highlight:
-          display: Book highlight
-          instructions: 'Show a book highlight.'
-          fields:
-            -
-              import: book_highlight
         call_to_action:
           display: Call to action
           instructions: 'Show a call to action.'
           fields:
             -
               import: call_to_action
+        collection:
+          display: Collection
+          instructions: 'Show collection entries.'
+          fields:
+            -
+              import: collection
         form:
           display: Form
           instructions: 'Show a form.'
           fields:
             -
               import: form
-        introduction:
-          display: Introduction
-          instructions: 'Show an introduction image.'
+        link_blocks:
+          display: Link blocks
+          instructions: 'Show link blocks.'
           fields:
             -
-              import: introduction
-        news_roll:
-          display: News roll
-          instructions: 'Show recent news items.'
-          fields:
-            -
-              import: news_roll
+              import: link_blocks

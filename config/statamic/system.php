@@ -44,11 +44,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Date Format
+    | Date Format
     |--------------------------------------------------------------------------
     |
-    | Any time a Carbon date is cast to a string, it should use this format.
+    | Whenever a Carbon date is cast to a string on front-end routes, it will
+    | use this format. On CP routes, the format defined in cp.php is used.
     | You can customize this format using PHP's date string constants.
+    | Setting this value to null will use Carbon's default format.
     |
     | https://www.php.net/manual/en/function.date.php
     |
@@ -80,6 +82,19 @@ return [
     */
 
     'track_last_update' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Enable Cache Tags
+    |--------------------------------------------------------------------------
+    |
+    | Sometimes you'll want to be able to disable the {{ cache }} tags in
+    | Antlers, so here is where you can do that. Otherwise, it will be
+    | enabled all the time.
+    |
+    */
+
+    'cache_tags_enabled' => env('STATAMIC_CACHE_TAGS_ENABLED', true),
 
     /*
     |--------------------------------------------------------------------------

@@ -1,17 +1,17 @@
-<div
-    class="flex
-        {{ inline
-            ? 'space-x-4'
-            : 'flex-col space-y-4'
+<div 
+    class="flex 
+        {{ inline 
+            ? 'space-x-4' 
+            : 'flex-col space-y-4' 
         }}"
 >
     {{ foreach:options as="value|label" }}
         <label class="inline-flex items-center">
-            <input
-                class="mr-2 rounded border-2 border-secondary bg-transparent text-secondary focus-visible:border-secondary focus-visible:ring-4 focus-visible:ring-secondary dark:focus-visible:ring-secondary focus-visible:ring-opacity-50 motion-safe:transition"
-                type="checkbox"
-                name="{{ handle }}[]"
-                value="{{ value }}"
+            <input 
+                class="mr-2 rounded border-neutral text-primary focus-visible:ring focus-visible:ring-primary motion-safe:transition" 
+                type="checkbox" 
+                name="{{ handle }}[]" 
+                value="{{ value }}" 
                 {{ old | in_array:value ?= checked }}
             >
             {{ trans key="{ label }" }}
