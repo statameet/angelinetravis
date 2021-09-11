@@ -125,3 +125,67 @@ module.exports = {
     }),
   ]
 }
+
+// colors: {
+//   transparent: 'transparent',
+//   black:   '#000',
+//   white:  '#fff',
+//   // Neutrals: neutral colors, with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
+//   neutral: {
+//     DEFAULT: '#231F16',
+//   },
+//   // Primary: primary brand color with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
+//   primary: {
+//     DEFAULT: '#BBA25F',
+//   },
+//   secondary: {
+//     DEFAULT: '#3A6F3B',
+//   },
+//   tertiary: {
+//     DEFAULT: '#4B5061',
+//   },
+//   creme: {
+//     DEFAULT: '#645F4C',
+//     light: '#FBF9F7',
+//     dark: '#645F4C',
+//   }
+// },
+
+// fontFamily: {
+//   sans: [
+//     // Use a custom sans serif font for this site by changing 'Gaultier' to the
+//     // font name you want and uncommenting the following line.
+//     'adobe-garamond-pro',
+//     ...defaultTheme.fontFamily.sans,
+//   ],
+// },
+
+// plugin(function({ addUtilities, theme, variants }) {
+//   const newUtilities = {
+//     '.draw-stroke': {
+//       strokeDashoffset: '-39',
+//     },
+//     '.mix-blend-overlay': {
+//       mixBlendMode: 'overlay',
+//     },
+//     '.text-decoration-primary': {
+//       textDecorationColor: theme('colors.primary.DEFAULT'),
+//     },
+//     '.underline-thickness-2': {
+//       textDecorationThickness: '2px',
+//     },
+//     '.underline-offset-2': {
+//       textUnderlineOffset: '2px',
+//     },
+//     '.ltr': {
+//       direction: 'ltr',
+//     },
+//     '.rtl': {
+//       direction: 'rtl',
+//       '> *': {
+//         direction: 'ltr',
+//       },
+//     },
+//   }
+//   addUtilities(newUtilities)
+// }),
