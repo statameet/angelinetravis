@@ -1,5 +1,5 @@
-order: 1
-title: Page
+order: 3
+title: 'List news'
 sections:
   main:
     display: Main
@@ -52,3 +52,8 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: template
+        field:
+          type: hidden
+          default: news/index

@@ -1,5 +1,4 @@
-order: 1
-title: Page
+title: News
 sections:
   main:
     display: Main
@@ -44,11 +43,15 @@ sections:
             - required
             - 'unique_entry_value:{collection},{id},{site}'
       -
-        handle: parent
+        handle: image
+        field: common.image
+        config:
+          mode: grid
+          display: Image
+          validate: required
+          listable: true
+      -
+        handle: date
         field:
-          type: entries
-          collections:
-            - pages
-          max_items: 1
-          listable: false
-          localizable: true
+          type: date
+          required: true

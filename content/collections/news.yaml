@@ -1,0 +1,11 @@
+title: News
+template: news/show
+layout: layout
+mount: b572af38-d9dd-4898-bb44-082d4cfa5d67
+revisions: false
+route: '/{mount}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

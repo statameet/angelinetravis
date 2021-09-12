@@ -1,0 +1,65 @@
+{{#
+	@name Books show
+	@desc The books show template with an outer wrapper grid as defined in tailwind.config.js. It makes sure all blocks on a page get evenly spaced without having to worry about margins or paddings.
+#}}
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "DataFeed",
+        "dataFeedElement": [
+          {
+            "@context": "http://schema.org",
+            "@type": "Book",
+            "@id": "{{ permalink }}",
+            "url": "{{ permalink }}",
+            "name": "{{ title }}",
+            "author": {
+              "@type": "Person",
+              "name": "Anne-Mei The"
+            }
+         }
+        ],
+        "dateModified": "{{ updated_at format="Y-m-d\TH:i:s" }}"
+    }
+</script>
+
+<main class="outer-grid">
+    <div class="fluid-container grid md:grid-cols-12 gap-8 md:gap-12">
+        <div class="md:col-span-8">
+            {{ partial:typography/h1 :content="title" }}
+
+            <div class="mb-4">
+                <span class="font-bold text-tertiary">Published on: </span><time class="font-bold text-primary italic">{{ date format_localized="%d %B %Y" }}</time>
+            </div>
+
+            <div class="prose max-w-none">{{ about }}</div>
+        </div>
+
+        <div class="md:col-span-4 md:pt-12 flex flex-col space-y-8 md:space-y-12">
+            {{ partial:components/picture :image="image" sizes="(min-width: 768px) 35vw, 90vw" class="w-full h-auto shadow-2xl"
+            cover="false" lazy="true" }}
+            {{ reviews }}
+                <div>
+                    <div class="mb-4 flex space-x-1">
+                        {{ loop times="5" }}
+                            {{ if index | add:1 <= stars }}
+                                {{ svg:star_filled class="w-4 h-4 text-primary stroke-current fill-current overflow-visible" }}
+                            {{ else }}
+                                {{ svg:star class="w-4 h-4 text-primary stroke-current overflow-visible" }}
+                            {{ /if }}
+                        {{ /loop }}
+                    </div>
+
+                    <p class="italic text-tertiary">
+                        {{ review ensure_left="&quot;" ensure_right="&quot;" }}
+                    </p>
+                </div>
+            {{ /reviews }}
+        </div>
+    </div>
+
+    {{ page_builder scope="block" }}
+        {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+</main>

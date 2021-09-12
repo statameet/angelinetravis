@@ -1,5 +1,5 @@
-order: 1
-title: Page
+order: 2
+title: 'List books'
 sections:
   main:
     display: Main
@@ -52,3 +52,8 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: template
+        field:
+          type: hidden
+          default: books/index
