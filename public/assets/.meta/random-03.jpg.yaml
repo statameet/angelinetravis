@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'A random image'
 size: 1099503
 last_modified: 1631451003
 width: 3682

@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'The book cover'
 size: 4148102
 last_modified: 1631450999
 width: 1387
