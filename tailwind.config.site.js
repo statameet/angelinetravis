@@ -20,13 +20,23 @@ module.exports = {
       white:  '#fff',
       // Neutrals: neutral colors, with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
       neutral: {
-        DEFAULT: colors.blueGray['800'],
-        ...colors.blueGray
+        DEFAULT: '#231F16',
       },
       // Primary: primary brand color with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
       primary: {
-        DEFAULT: '#FF0274'
+        DEFAULT: '#BBA25F',
       },
+      secondary: {
+        DEFAULT: '#3A6F3B',
+      },
+      tertiary: {
+        DEFAULT: '#4B5061',
+      },
+      creme: {
+        DEFAULT: '#645F4C',
+        light: '#FBF9F7',
+        dark: '#645F4C',
+      }
     },
     extend: {
       // Set default transition durations and easing when using the transition utilities.
@@ -39,23 +49,11 @@ module.exports = {
     },
     // Remove the font families you don't want to use.
     fontFamily: {
-      mono: [
-        // Use a custom mono font for this site by changing 'Anonymous' to the
-        // font name you want and uncommenting the following line.
-        // 'Anonymous',
-        ...defaultTheme.fontFamily.mono,
-      ],
       sans: [
         // Use a custom sans serif font for this site by changing 'Gaultier' to the
         // font name you want and uncommenting the following line.
-        // 'Gaultier',
+        'adobe-garamond-pro',
         ...defaultTheme.fontFamily.sans,
-      ],
-      serif: [
-        // Use a custom serif font for this site by changing 'Lavigne' to the
-        // font name you want and uncommenting the following line.
-        // 'Lavigne',
-        ...defaultTheme.fontFamily.serif,
       ],
     },
     // The font weights available for this site.
@@ -120,72 +118,32 @@ module.exports = {
     // Custom utilities for this particular site.
     plugin(function({ addUtilities, theme, variants }) {
       const newUtilities = {
+        '.draw-stroke': {
+          strokeDashoffset: '-39',
+        },
+        '.mix-blend-overlay': {
+          mixBlendMode: 'overlay',
+        },
+        '.text-decoration-primary': {
+          textDecorationColor: theme('colors.primary.DEFAULT'),
+        },
+        '.underline-thickness-2': {
+          textDecorationThickness: '2px',
+        },
+        '.underline-offset-2': {
+          textUnderlineOffset: '2px',
+        },
+        '.ltr': {
+          direction: 'ltr',
+        },
+        '.rtl': {
+          direction: 'rtl',
+          '> *': {
+            direction: 'ltr',
+          },
+        },
       }
       addUtilities(newUtilities)
     }),
   ]
 }
-
-// colors: {
-//   transparent: 'transparent',
-//   black:   '#000',
-//   white:  '#fff',
-//   // Neutrals: neutral colors, with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
-//   neutral: {
-//     DEFAULT: '#231F16',
-//   },
-//   // Primary: primary brand color with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
-//   primary: {
-//     DEFAULT: '#BBA25F',
-//   },
-//   secondary: {
-//     DEFAULT: '#3A6F3B',
-//   },
-//   tertiary: {
-//     DEFAULT: '#4B5061',
-//   },
-//   creme: {
-//     DEFAULT: '#645F4C',
-//     light: '#FBF9F7',
-//     dark: '#645F4C',
-//   }
-// },
-
-// fontFamily: {
-//   sans: [
-//     // Use a custom sans serif font for this site by changing 'Gaultier' to the
-//     // font name you want and uncommenting the following line.
-//     'adobe-garamond-pro',
-//     ...defaultTheme.fontFamily.sans,
-//   ],
-// },
-
-// plugin(function({ addUtilities, theme, variants }) {
-//   const newUtilities = {
-//     '.draw-stroke': {
-//       strokeDashoffset: '-39',
-//     },
-//     '.mix-blend-overlay': {
-//       mixBlendMode: 'overlay',
-//     },
-//     '.text-decoration-primary': {
-//       textDecorationColor: theme('colors.primary.DEFAULT'),
-//     },
-//     '.underline-thickness-2': {
-//       textDecorationThickness: '2px',
-//     },
-//     '.underline-offset-2': {
-//       textUnderlineOffset: '2px',
-//     },
-//     '.ltr': {
-//       direction: 'ltr',
-//     },
-//     '.rtl': {
-//       direction: 'rtl',
-//       '> *': {
-//         direction: 'ltr',
-//       },
-//     },
-//   }
-//   addUtilities(newUtilities)
-// }),

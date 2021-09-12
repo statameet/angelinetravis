@@ -17,7 +17,8 @@ module.exports = {
           css: {
             color: theme('colors.neutral.DEFAULT'),
             '[class~="lead"]': {
-              color: theme('colors.neutral.DEFAULT'),
+              color: theme('colors.tertiary.DEFAULT'),
+              fontWeight: theme('fontWeight.bold'),
             },
             a: {
               color: theme('colors.primary.DEFAULT'),
@@ -29,7 +30,7 @@ module.exports = {
               textDecoration: 'none',
             },
             'h1, h2, h3, h4': {
-              color: theme('colors.primary.DEFAULT'),
+              color: theme('colors.tertiary.DEFAULT'),
             },
             blockquote: {
               borderColor: theme('colors.primary.DEFAULT'),
@@ -64,47 +65,3 @@ module.exports = {
     }),
   ]
 }
-
-// DEFAULT: {
-//   css: {
-//     color: theme('colors.neutral.DEFAULT'),
-//     '[class~="lead"]': {
-//       color: theme('colors.tertiary.DEFAULT'),
-//       fontWeight: theme('fontWeight.bold'),
-//     },
-//     a: {
-//       color: theme('colors.primary.DEFAULT'),
-//       '&:hover': {
-//         color: theme('colors.primary.DEFAULT'),
-//       },
-//     },
-//     'a.no-underline': {
-//       textDecoration: 'none',
-//     },
-//     'h1, h2, h3, h4': {
-//       color: theme('colors.tertiary.DEFAULT'),
-//     },
-//     blockquote: {
-//       borderColor: theme('colors.primary.DEFAULT'),
-//     },
-//     hr: {
-//       borderColor: theme('colors.neutral.DEFAULT'),
-//     },
-//     'ul > li::before': {
-//       backgroundColor: theme('colors.neutral.DEFAULT'),
-//     },
-//     'ol > li::before': {
-//       color: theme('colors.neutral.DEFAULT'),
-//     },
-//     'ul > li p, ol > li p': {
-//       marginTop: '0em !important',
-//       marginBottom: '0em !important',
-//     },
-//     pre: {
-//       whiteSpace: 'pre-wrap',
-//     },
-//     strong: {
-//       color: theme('colors.neutral.DEFAULT'),
-//     },
-//   }
-// }
