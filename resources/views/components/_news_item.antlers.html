@@ -1,0 +1,16 @@
+{{#
+	@name News item
+	@desc The news item component that can be called in on news rolls or index pages.
+#}}
+
+<article class="{{ class }} flex flex-col">
+    <a href="{{ url }}" title="Lees het artikel" aria-label="Lees het artikel: {{ title }}">
+        <figure class="relative w-full mb-6 h-64">
+            {{ partial:components/picture :image="image" class="relative z-10" cover="true" lazy="true" sizes="(min-width: 768px) 30vw, 90vw" }}
+        </figure>
+    </a>
+
+    <time class="mb-2 font-bold text-primary italic">{{ date format_localized="%d %B %Y" }}</time>
+
+    <a class="hover:underline text-decoration-primary" href="{{ url }}" title="Lees het artikel" aria-label="Lees het artikel: {{ title }}">{{ partial:typography/h3 color="text-secondary" :content="title" }}</a>
+</article>
