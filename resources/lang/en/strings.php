@@ -7,12 +7,15 @@ return [
     'form_mail_closing'                 => 'Kind regards',
     'form_mail_from'                    => config('app.name'),
     'form_mail_greeting'                => 'Dear',
-    'form_mail_logo'                    => 'https://cdn.studio1902.nl/assets/statamic-peak/statamic-peak-logo.png',
+    'form_mail_logo'                    => 'https://cdn.studio1902.nl/assets/angelinetravis.com/angeline-travis-logo.png',
     'form_mail_submitted'               => 'Submitted',
     'form_mail_title'                   => 'Contact form',
     'form_mail_url'                     => config('app.url'),
     'form_send'                         => 'Send message',
     'form_success'                      => 'Thank you, we received your message and will contact you as soon as possible.',
+
+    // Book
+    'book_discover'                     => 'Discover this book',
 
     // Cookie banner
     'cookie_title'                      => 'Cookies 🍪',
@@ -34,6 +37,9 @@ return [
     // Navigation
     'close'                             => 'Close',
     'menu'                              => 'Menu',
+
+    // News
+    'news_all'                          => 'All news',
 
     // Other
     'dark_mode_on'                      => 'Enable dark mode',
