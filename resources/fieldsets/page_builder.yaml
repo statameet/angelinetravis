@@ -22,21 +22,9 @@ fields:
           fields:
             -
               import: call_to_action
-        collection:
-          display: Collection
-          instructions: 'Show collection entries.'
-          fields:
-            -
-              import: collection
         form:
           display: Form
           instructions: 'Show a form.'
           fields:
             -
               import: form
-        link_blocks:
-          display: Link blocks
-          instructions: 'Show link blocks.'
-          fields:
-            -
-              import: link_blocks
