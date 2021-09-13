@@ -15,16 +15,19 @@ data:
       collection: pages
       fallback: page_builder
       field_handle: null
+      custom_text: null
     -
       collection: news
       fallback: page_builder
       field_handle: null
+      custom_text: null
     -
       collection: books
       fallback: field
       field_handle: teaser
+      custom_text: null
   json_ld_type: person
-  person_name: 'Daisy D. Huff'
+  person_name: 'Angeline Travis'
   breadcrumbs: true
   use_social_image_generation: true
   social_images_collections:
