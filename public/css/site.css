@@ -1537,14 +1537,14 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .w-3 {
 	width: 0.75rem;
 }
+.w-\[230px\] {
+	width: 230px;
+}
 .w-2 {
 	width: 0.5rem;
 }
 .w-16 {
 	width: 4rem;
-}
-.w-\[230px\] {
-	width: 230px;
 }
 .max-w-none {
 	max-width: none;
@@ -2027,11 +2027,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 300ms;
 }
-.transition-transform {
-	transition-property: transform;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 300ms;
-}
 .transition-opacity {
 	transition-property: opacity;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2075,15 +2070,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 }
 .last\:mb-0:last-child {
 	margin-bottom: 0px;
-}
-.hover\:rotate-2:hover {
-	--tw-rotate: 2deg;
-	transform: var(--tw-transform);
-}
-.hover\:scale-125:hover {
-	--tw-scale-x: 1.25;
-	--tw-scale-y: 1.25;
-	transform: var(--tw-transform);
 }
 .hover\:bg-gray-300:hover {
 	--tw-bg-opacity: 1;
