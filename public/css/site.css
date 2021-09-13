@@ -1543,6 +1543,9 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .w-16 {
 	width: 4rem;
 }
+.w-\[230px\] {
+	width: 230px;
+}
 .max-w-none {
 	max-width: none;
 }
@@ -1585,6 +1588,9 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 }
 .items-start {
 	align-items: flex-start;
+}
+.items-end {
+	align-items: flex-end;
 }
 .items-center {
 	align-items: center;
@@ -1817,6 +1823,9 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .pr-10 {
 	padding-right: 2.5rem;
 }
+.pt-6 {
+	padding-top: 1.5rem;
+}
 .text-left {
 	text-align: left;
 }
@@ -1997,11 +2006,21 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(58, 111, 59, var(--tw-ring-opacity));
 }
+.ring-primary {
+	--tw-ring-opacity: 1;
+	--tw-ring-color: rgba(187, 162, 95, var(--tw-ring-opacity));
+}
 .ring-offset-4 {
 	--tw-ring-offset-width: 4px;
 }
+.ring-offset-8 {
+	--tw-ring-offset-width: 8px;
+}
 .ring-offset-white {
 	--tw-ring-offset-color: #fff;
+}
+.ring-offset-creme-light {
+	--tw-ring-offset-color: #FBF9F7;
 }
 .transition-colors {
 	transition-property: background-color, border-color, color, fill, stroke;
@@ -2364,6 +2383,10 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 
 	.lg\:-mb-8 {
 		margin-bottom: -2rem;
+	}
+
+	.lg\:w-\[300px\] {
+		width: 300px;
 	}
 
 	.lg\:py-16 {
