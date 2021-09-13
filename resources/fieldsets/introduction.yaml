@@ -1,0 +1,17 @@
+title: 'Introduction'
+fields:
+  -
+    handle: text
+    field: common.text_plain
+    config:
+      width: 66
+      validate:
+        - required
+  -
+    handle: image
+    field: common.image
+    config:
+      mode: grid
+      width: 33
+      validate:
+        - required

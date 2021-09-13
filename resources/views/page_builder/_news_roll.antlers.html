@@ -1,0 +1,23 @@
+{{#
+	@name News roll
+	@desc The news roll page builder block.
+    @set page.page_builder.news_roll
+#}}
+
+<section class="w-full py-8 md:py-12 lg:py-16 xl:py-20 bg-primary bg-opacity-10">
+    <div class="fluid-container grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-12 -mb-4">
+            {{ partial:typography/h2 :content="block:title" }}
+        </div>
+
+        {{ collection:news limit="3" as="items" }}
+            {{ items }}
+                {{ partial:components/news_item class="md:col-span-4" }}
+            {{ /items }}
+        {{ /collection:news }}
+
+        <div class="md:col-span-12 justify-self-end -mt-4">
+            {{ partial:components/button label="{trans:strings.news_all}" link_type="url" url="{mount_url from='news'}" }}
+        </div>
+    </div>
+</section>

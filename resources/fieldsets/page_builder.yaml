@@ -16,6 +16,12 @@ fields:
           fields:
             -
               import: article
+        book_highlight:
+          display: Book highlight
+          instructions: 'Show a book highlight.'
+          fields:
+            -
+              import: book_highlight
         call_to_action:
           display: Call to action
           instructions: 'Show a call to action.'
@@ -28,3 +34,15 @@ fields:
           fields:
             -
               import: form
+        introduction:
+          display: Introduction
+          instructions: 'Show an introduction image.'
+          fields:
+            -
+              import: introduction
+        news_roll:
+          display: News roll
+          instructions: 'Show recent news items.'
+          fields:
+            -
+              import: news_roll

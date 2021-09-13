@@ -1,0 +1,10 @@
+title: 'Book highlight'
+fields:
+  -
+    handle: book
+    field: common.entry
+    config:
+      replicator_preview: false
+      display: Book
+      collections:
+        - books
