@@ -1420,13 +1420,13 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
-.my-1 {
-	margin-top: 0.25rem;
-	margin-bottom: 0.25rem;
-}
 .mx-\[1ch\] {
 	margin-left: 1ch;
 	margin-right: 1ch;
+}
+.my-1 {
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
 }
 .mb-2 {
 	margin-bottom: 0.5rem;
@@ -1458,6 +1458,9 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .mr-2 {
 	margin-right: 0.5rem;
 }
+.ml-2 {
+	margin-left: 0.5rem;
+}
 .mb-3 {
 	margin-bottom: 0.75rem;
 }
@@ -1478,9 +1481,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 }
 .mb-8 {
 	margin-bottom: 2rem;
-}
-.ml-2 {
-	margin-left: 0.5rem;
 }
 .block {
 	display: block;
@@ -1518,9 +1518,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .h-64 {
 	height: 16rem;
 }
-.h-3 {
-	height: 0.75rem;
-}
 .h-16 {
 	height: 4rem;
 }
@@ -1550,9 +1547,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 }
 .w-64 {
 	width: 16rem;
-}
-.w-3 {
-	width: 0.75rem;
 }
 .w-\[230px\] {
 	width: 230px;
@@ -1848,10 +1842,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 }
-.py-4 {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-}
 .py-6 {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
@@ -1863,6 +1853,12 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 .pr-10 {
 	padding-right: 2.5rem;
 }
+.pt-8 {
+	padding-top: 2rem;
+}
+.pb-24 {
+	padding-bottom: 6rem;
+}
 .pt-6 {
 	padding-top: 1.5rem;
 }
@@ -1871,12 +1867,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 }
 .pr-8 {
 	padding-right: 2rem;
-}
-.pt-8 {
-	padding-top: 2rem;
-}
-.pb-24 {
-	padding-bottom: 6rem;
 }
 .text-left {
 	text-align: left;
@@ -2009,13 +1999,13 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 	--tw-text-opacity: 1;
 	color: rgba(30, 41, 59, var(--tw-text-opacity));
 }
-.text-creme {
-	--tw-text-opacity: 1;
-	color: rgba(100, 95, 76, var(--tw-text-opacity));
-}
 .text-creme-light {
 	--tw-text-opacity: 1;
 	color: rgba(251, 249, 247, var(--tw-text-opacity));
+}
+.text-creme {
+	--tw-text-opacity: 1;
+	color: rgba(100, 95, 76, var(--tw-text-opacity));
 }
 .text-yellow-400 {
 	--tw-text-opacity: 1;
@@ -2394,10 +2384,6 @@ input[type="file"]::file-selector-button, input[type="file"]::-webkit-file-uploa
 
 	.md\:items-center {
 		align-items: center;
-	}
-
-	.md\:justify-between {
-		justify-content: space-between;
 	}
 
 	.md\:gap-12 {
