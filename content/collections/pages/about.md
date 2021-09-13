@@ -19,7 +19,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'About Daisy D. Huff'
+            text: 'About Angeline'
       -
         type: set
         attrs:
