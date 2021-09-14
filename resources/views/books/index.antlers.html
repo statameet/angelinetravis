@@ -20,6 +20,7 @@
                             Likes: {{ likes }}
                             <form action="{{ route:statamic.likes.store }}" method="POST">
                                 {{ csrf_field }}
+                                <input type="hidden" name="id" value="{{ id }}" />
                                 <button type="submit">Like</button>
                             </form>
                         </div>
