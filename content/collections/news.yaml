@@ -1,7 +1,7 @@
 title: News
 template: news/show
 layout: layout
-mount: b572af38-d9dd-4898-bb44-082d4cfa5d67
+mount: a7129c0e-04f6-4a1d-bcf7-d844db1e331d
 revisions: false
 route: '/{mount}/{slug}'
 date: true

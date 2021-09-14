@@ -1,7 +1,7 @@
 title: Books
 template: books/show
 layout: layout
-mount: 36b30343-24a1-433e-ac10-4adb435bfa6a
+mount: 476fed8c-be0b-4d50-900f-b674d1fc35be
 revisions: false
 route: '/{mount}/{slug}'
 date: true
