@@ -3,8 +3,14 @@
 	@desc The default template with an outer wrapper grid as defined in tailwind.config.js. It makes sure all blocks on a page get evenly spaced without having to worry about margins or paddings.
 #}}
 
-<main class="outer-grid">    
+<main class="outer-grid">
     {{ page_builder scope="block" }}
-        {{ partial src="page_builder/{type}" }}
+        {{ if exclude_from_cache }}
+            {{ partial src="page_builder/{type}" }}
+        {{ else }}
+            {{ cache key="{type}_{count}" for="1 minute" }}
+                {{ partial src="page_builder/{type}" }}
+            {{ /cache }}
+        {{ /if }}
     {{ /page_builder }}
 </main>
