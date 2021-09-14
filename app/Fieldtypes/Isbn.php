@@ -2,6 +2,7 @@
 
 namespace App\Fieldtypes;
 
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Statamic\Fields\Fieldtype;
 
@@ -31,7 +32,11 @@ class Isbn extends Fieldtype
             ]
         */
 
+        // https://openlibrary.org/dev/docs/api/books
         // https://laravel.com/docs/8.x/http-client#making-requests
-        return Http::get("https://openlibrary.org/isbn/{$value}.json")->json();
+        return Cache::rememberForever(
+            'isbn-'.$value,
+            fn () => Http::get("https://openlibrary.org/isbn/{$value}.json")->json()
+        );
     }
 }
