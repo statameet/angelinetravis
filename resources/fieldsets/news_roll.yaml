@@ -10,3 +10,6 @@ fields:
       display: Title
       validate:
         - required
+  -
+    handle: exclude_from_cache
+    field: common.exclude_from_cache
