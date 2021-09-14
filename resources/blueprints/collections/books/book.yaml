@@ -66,6 +66,15 @@ sections:
           validate: required
           mode: default
       -
+        handle: likes
+        field:
+          default: '0'
+          display: Likes
+          type: integer
+          icon: integer
+          listable: hidden
+          instructions_position: above
+      -
         handle: reviews
         field:
           fields:
