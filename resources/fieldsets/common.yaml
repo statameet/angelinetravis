@@ -13,14 +13,14 @@ fields:
       listable: hidden
       display: Image
   -
-      handle: entry
-      field:
-        max_items: 1
-        mode: default
-        type: entries
-        localizable: true
-        listable: false
-        display: Entry
+    handle: entry
+    field:
+      max_items: 1
+      mode: default
+      type: entries
+      localizable: true
+      listable: false
+      display: Entry
   -
     handle: text_rich
     field:
@@ -88,3 +88,11 @@ fields:
       default: md
       listable: hidden
       display: Size
+  -
+    handle: exclude_from_cache
+    field:
+      default: true
+      display: 'Exclude From Cache'
+      type: toggle
+      icon: toggle
+      listable: hidden
