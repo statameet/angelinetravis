@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "643f2d43cf1265109cca9ff4c6bed0e6",
+    "content-hash": "16f51c10715c62b56777c572f0ed5d44",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4405,6 +4405,35 @@
                 }
             ],
             "time": "2021-03-30T19:46:13+00:00"
+        },
+        {
+            "name": "statameet/likes",
+            "version": "dev-erin/03-likes",
+            "dist": {
+                "type": "path",
+                "url": "addons/statameet/likes",
+                "reference": "0ab2c1044fbc37bb3c6b170ffc7dd4f68d8b62a5"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Likes",
+                    "description": "Likes addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Statameet\\Likes\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statameet\\Likes\\": "src"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "statamic/cms",
@@ -10279,7 +10308,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "statameet/likes": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

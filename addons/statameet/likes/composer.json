@@ -1,0 +1,19 @@
+{
+    "name": "statameet/likes",
+    "autoload": {
+        "psr-4": {
+            "Statameet\\Likes\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Likes",
+            "description": "Likes addon"
+        },
+        "laravel": {
+            "providers": [
+                "Statameet\\Likes\\ServiceProvider"
+            ]
+        }
+    }
+}
