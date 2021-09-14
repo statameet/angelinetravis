@@ -73,7 +73,18 @@ return [
 
         'class' => null,
 
-        'rules' => 'all',
+        // 'rules' => 'all',
+
+        'rules' => [
+            'collections' => [
+                'news' => [
+                    'urls' => [
+                        '/news',
+                        '/',
+                    ]
+                ]
+            ]
+        ],
 
     ],
 
