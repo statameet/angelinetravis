@@ -16,19 +16,21 @@
                 <div class="flex items-center justify-center md:col-span-4 md:col-start-2">
                     <figure class="w-2/3 md:w-full">
                         {{ partial:components/picture :image="image" class="w-full h-auto shadow-2xl" cover="false" lazy="true" sizes="(min-width: 768px) 25vw, 90vw" }}
-                        <div>
-                            Likes: {{ likes }}
-                            <form action="{{ route:statamic.likes.store }}" method="POST">
-                                {{ csrf_field }}
-                                <input type="hidden" name="id" value="{{ id }}" />
-                                <button type="submit">Like</button>
-                            </form>
-                        </div>
                     </figure>
                 </div>
 
                 <div class="self-center md:col-span-6">
                     {{ partial:typography/h2 class="mb-4" :content="title" }}
+
+                    <div class="mb-4">
+                        <span class="font-bold text-tertiary">Likes: </span>
+                        <time class="font-bold text-primary">{{ likes }}</span>
+                        <form action="{{ route:statamic.likes.store }}" method="POST">
+                            {{ csrf_field }}
+                            <input type="hidden" name="id" value="{{ id }}" />
+                            <button class="font-bold text-sm uppercase tracking-widest text-secondary text-decoration-primary hover:underline" type="submit">Like this book</button>
+                        </form>
+                    </div>
 
                     {{ partial:typography/paragraph :content="teaser" }}
 
