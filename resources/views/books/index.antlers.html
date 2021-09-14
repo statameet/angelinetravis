@@ -18,6 +18,10 @@
                         {{ partial:components/picture :image="image" class="w-full h-auto shadow-2xl" cover="false" lazy="true" sizes="(min-width: 768px) 25vw, 90vw" }}
                         <div>
                             Likes: {{ likes }}
+                            <form action="{{ route:statamic.likes.store }}" method="POST">
+                                {{ csrf_field }}
+                                <button type="submit">Like</button>
+                            </form>
                         </div>
                     </figure>
                 </div>
