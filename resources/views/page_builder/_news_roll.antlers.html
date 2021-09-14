@@ -10,7 +10,7 @@
             {{ partial:typography/h2 :content="block:title" }}
         </div>
 
-        {{ collection:news limit="3" as="items" }}
+        {{ collection:news limit="3" as="items" sort="random" }}
             {{ items }}
                 {{ partial:components/news_item class="md:col-span-4" }}
             {{ /items }}
