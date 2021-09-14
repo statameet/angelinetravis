@@ -1,7 +1,8 @@
 const mix = require('laravel-mix')
 
 mix.js('resources/js/site.js', 'public/js/site.js')
-    .sourceMaps(false)
+   .js('resources/js/cp.js', 'public/vendor/app/js/cp.js').vue()
+   .sourceMaps(false)
 
 mix.postCss('resources/css/site.css', 'public/css/site.css', [
     require('postcss-import'),
