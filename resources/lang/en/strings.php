@@ -40,6 +40,7 @@ return [
 
     // News
     'news_all'                          => 'All news',
+    'news_read_article'                 => 'Read the article',
 
     // Other
     'dark_mode_on'                      => 'Enable dark mode',
