@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 2d840f14-f430-469b-91bb-2ae10e38f1e2
-updated_at: 1630352912
+updated_at: 1631560184
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -44,6 +44,4 @@ page_builder:
     type: news_roll
     enabled: true
 seo_description: 'Reprehenderit omnis ipsa culpa quod minima. Cumque odit voluptatem sit aut voluptatem temporibus possimus. Quasi id ea velit quaerat doloribus.'
-og_image: home-og.png
-twitter_image: home-twitter.png
 ---
