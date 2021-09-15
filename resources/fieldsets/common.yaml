@@ -93,6 +93,6 @@ fields:
     field:
       default: true
       display: 'Exclude From Cache'
-      type: toggle
-      icon: toggle
+      type: hidden
+      icon: hidden
       listable: hidden
