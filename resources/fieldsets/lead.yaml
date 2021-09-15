@@ -1,0 +1,5 @@
+title: Lead
+fields:
+  -
+    handle: text
+    field: common.text_plain
