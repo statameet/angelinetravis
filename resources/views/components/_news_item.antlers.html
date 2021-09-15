@@ -4,7 +4,7 @@
 #}}
 
 <article class="{{ class }} flex flex-col">
-    <a href="{{ url }}" title="Lees het artikel" aria-label="Lees het artikel: {{ title }}">
+    <a href="{{ url }}" title="{{ trans:strings.news_read_article }}" aria-label="{{ trans:strings.news_read_article }}">
         <figure class="relative w-full mb-6 h-64">
             {{ partial:components/picture :image="image" class="relative z-10" cover="true" lazy="true" sizes="(min-width: 768px) 30vw, 90vw" }}
         </figure>
