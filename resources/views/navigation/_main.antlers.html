@@ -6,20 +6,22 @@
 {{# The desktop navigation. Hidden on smaller screen. Shown from md and up. #}}
 <nav class="hidden md:block mb-3">
     <ul class="flex justify-end items-center space-x-2 lg:space-x-4 xl:space-x-6">
-        {{ nav:main max_depth="2" include_home="true" }}
-            <li class="relative leading-none">
-                <a
-                    class="
-                        flex items-center px-1 pt-1 rounded-sm font-bold text-sm hover:text-secondary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-4 ring-offset-creme-light
-                        {{ is_current || is_parent
-                            ? 'text-secondary underline underline-thickness-2 underline-offset-2'
-                            : 'text-creme' }}"
-                    href="{{ url }}"
-                >
-                    {{ title }}
-                </a>
-            </li>
-        {{ /nav:main }}
+        {{ cache scope="site" }}
+            {{ nav:main max_depth="2" include_home="true" }}
+                <li class="relative leading-none">
+                    <a
+                        class="
+                            flex items-center px-1 pt-1 rounded-sm font-bold text-sm hover:text-secondary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-4 ring-offset-creme-light
+                            {{ is_current || is_parent
+                                ? 'text-secondary underline underline-thickness-2 underline-offset-2'
+                                : 'text-creme' }}"
+                        href="{{ url }}"
+                    >
+                        {{ title }}
+                    </a>
+                </li>
+            {{ /nav:main }}
+        {{ /cache }}
     </ul>
 </nav>
 
