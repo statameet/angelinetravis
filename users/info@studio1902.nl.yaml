@@ -6,3 +6,7 @@ preferences:
   collections:
     books:
       after_save: continue_editing
+    pages:
+      after_save: continue_editing
+    news:
+      after_save: continue_editing
