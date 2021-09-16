@@ -1,11 +1,8 @@
 <div id="{{ selector }}" style="{{ style }}" class="relative flex bg-creme-light">
     {{ get_content:id }}
-        <div class="relative w-3/5 p-16  flex flex-col justify-center">
+        <div class="relative w-3/5 p-16 flex flex-col justify-center">
             <img class="w-full h-auto mb-24" src="/visuals/angeline-travis-logo.svg"/>
             <h1 class="text-3xl text-creme-dark font-normal absolute right-16 bottom-16 left-16 text-right">{{ title }}</h1>
-            {{ if collection == 'news' }}
-            <p>{{ teaser }}</p>
-            {{ /if }}
         </div>
         <figure class="w-2/5">
             {{ partial:components/picture image="{ image ?? configuration:social_image }" class="w-full h-full" cover="true" lazy="false" sizes="50vw" }}
